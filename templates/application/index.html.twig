@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <ul>
+        {% for demo in demos %}
+            <li>
+                {{ demo.name }}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

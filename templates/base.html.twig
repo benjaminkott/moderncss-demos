@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% if block("title") is defined %}{{ block('title') }} - {% endif %}Modern CSS Demos</title>
+    {{ encore_entry_link_tags('app') }}
+    {% block stylesheets %}{% endblock %}
+</head>
+<body class="styleguide-body">
+
+    <div class="styleguide-page">
+        <div class="styleguide-page-navigation">
+            <nav class="styleguide-navigation">
+                {{ knp_menu_render('main') }}
+            </nav>
+        </div>
+        <div class="styleguide-page-content">
+            <div class="styleguide-page-content-body">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    {% block javascripts %}{% endblock %}
+    {{ encore_entry_script_tags('app') }}
+</body>
+</html>
