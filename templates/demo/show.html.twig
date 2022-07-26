@@ -4,7 +4,10 @@
 
     <div class="demo-container">
         <div class="demo-preview">
-            <iframe src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
+            <iframe id="demo-preview" src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
+        </div>
+        <div class="demo-control">
+            <input type="range" min="1" max="100" value="100" id="demo-preview-control" step="1">
         </div>
     </div>
 
