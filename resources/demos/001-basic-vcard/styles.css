@@ -113,6 +113,7 @@
     }
     .vcard-name {
         font-size: 1.5rem;
+        margin-bottom: .75rem;
     }
     .vcard-social {
         gap: .75rem;
