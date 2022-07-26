@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
 {% block body %}
 
-    <ul>
-        {% for demo in demos %}
-            <li>
-                {{ demo.name }}
-            </li>
-        {% endfor %}
-    </ul>
+<div class="container">
+    {% for demo in demos %}
+        <div class="card">
+            <div class="card-body">
+                <a href="{{ path('app_demo_show', { 'identifier': demo.identifier }) }}">
+                    {{ demo.name }}
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
 
 {% endblock %}

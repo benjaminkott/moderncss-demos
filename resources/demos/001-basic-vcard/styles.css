@@ -1,0 +1,125 @@
+.vcard {
+    color: #313131;
+}
+.vcard-container {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 0 2px 1px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    background-color: #fff;
+    flex-direction: column;
+}
+.vcard-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8bc34a;
+    padding: 1rem;
+    height: 100px;
+}
+.vcard-image img {
+    display: block;
+    width: auto;
+    max-height: 100%;
+    border-radius: 50%;
+}
+.vcard-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+.vard-body > * {
+    width: 100%;
+}
+.vcard-name {
+    font-size: .75rem;
+    margin-bottom: 0.325rem;
+    line-height: 1.25;
+    font-weight: bold;
+}
+.vcard-info {
+    font-size: .75rem;
+    line-height: 1.25;
+    color: #689f38;
+}
+.vcard-bio {
+    display: none;
+    font-size: 1rem;
+}
+.vcard-social {
+    margin-top: auto;
+    display: flex;
+    gap: 0.5rem;
+}
+.vcard-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #689f38;
+}
+.vcard-icon {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    fill: currentColor;
+}
+@media (min-width: 250px) {
+    .vcard-body {
+        padding: 1.25rem;
+        gap: 1.25rem;
+    }
+    .vcard-image {
+        padding: 1.25rem;
+        height: 150px;
+    }
+    .vcard-bio {
+        display: block;
+    }
+    .vcard-name {
+        font-size: 1.2rem;
+    }
+    .vcard-info {
+        font-size: 1rem;
+    }
+    .vcard-social {
+        gap: .625rem;
+    }
+    .vcard-icon {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+}
+@media (min-width: 500px) {
+    .vcard-container {
+        flex-direction: row;
+    }
+    .vcard-image {
+        width: 200px;
+        flex-shrink: 0;
+        height: auto;
+        padding: 0;
+    }
+    .vcard-image img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    .vcard-body {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    .vcard-name {
+        font-size: 1.5rem;
+    }
+    .vcard-social {
+        gap: .75rem;
+    }
+    .vcard-icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+

@@ -1,12 +1,12 @@
 @layer layout, theme, override;
 
 @layer theme {
-    :host {
+    :root {
         --vcard-highlight-color: #039be5;
         --vcard-highlight-bg: #29b6f6;
     }
     @media (prefers-color-scheme: dark) {
-        :host {
+        :root {
             --vcard-highlight-color: #29b6f6;
             --vcard-highlight-bg: #039be5;
         }
@@ -14,8 +14,7 @@
 }
 
 @layer layout {
-    :host {
-        background: #dadada;
+    :root {
         --vcard-name-font-size: .75rem;
         --vcard-info-font-size: .75rem;
         --vcard-bio-font-size: .75rem;
@@ -29,8 +28,7 @@
         --vcard-highlight-bg: #8bc34a;
     }
     @media (prefers-color-scheme: dark) {
-        :host {
-            background: #212121;
+        :root {
             --vcard-color: #fafafa;
             --vcard-bg: #313131;
             --vcard-highlight-color: #9ccc65;
@@ -40,7 +38,6 @@
     .vcard {
         container-type: inline-size;
         color: var(--vcard-color);
-        font-size: var(--vcard-font-size);
     }
     .vcard-container {
         display: grid;
@@ -113,6 +110,7 @@
     @container (min-width: 250px) {
         .vcard-container {
             --vcard-name-font-size: 1.2rem;
+            --vcard-info-font-size: 1rem;
             --vcard-icon-size: 1.25rem;
             --vcard-spacing: 1.25rem;
             grid-template:
@@ -127,7 +125,6 @@
     @container (min-width: 500px) {
         .vcard-container {
             --vcard-name-font-size: 1.5rem;
-            --vcard-info-font-size: 1rem;
             --vcard-bio-font-size: 1rem;
             --vcard-icon-size: 1.5rem;
             --vcard-spacing: 1.5rem;
@@ -139,7 +136,6 @@
             padding: 0;
         }
         .vcard-image img {
-            display: block;
             object-fit: cover;
             width: 100%;
             height: 100%;

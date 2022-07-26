@@ -2,7 +2,7 @@
 <div class="vcard-grid">
 
     {% for vcard in data.vcards %}
-    {% include 'demos/' ~ identifier ~ '/_vcard.html.twig' with { 'vcard': vcard } only %}
+    {% include 'shared/_vcard.html.twig' with { 'vcard': vcard } only %}
     {% endfor %}
 
 </div>
