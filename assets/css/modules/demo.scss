@@ -12,45 +12,15 @@
     align-items: center;
     background-color: #1e1e1e;
     padding: 1rem;
-    overflow: auto;
-    @media (prefers-color-scheme: dark) {
-        color-scheme: dark;
-    }
-    demo-container {
-        border: 2px solid #414141;
-        border-radius: 5px;
-        resize: horizontal;
-        overflow: auto;
-        padding: 1rem;
+    iframe {
         display: block;
         height: 100%;
         width: 100%;
-    }
-}
-.demo-form {
-    padding: 1rem;
-    color: #ffffff;
-    background-color: #252526;
-    font-size: 12px;
-    box-shadow: 0 0 2px 2px rgb(0, 0, 0, .25);
-
-    .btn,
-    .form-control {
-        font-size: inherit;
-    }
-    .form-control {
-        border-color: hsl(0 0 20%);
-        color: #ffffff;
-        font-family: monospace;
-        border-radius: 2px;
-        background-color: hsl(0 0 15%);
-        color-scheme: dark;
-        resize: none;
-    }
-
-    form {
-        > *:last-child {
-            margin-bottom: 0 !important;
+        border: 2px solid #414141;
+        border-radius: 5px;
+        resize: horizontal;
+        @media (prefers-color-scheme: dark) {
+            color-scheme: dark;
         }
     }
 }

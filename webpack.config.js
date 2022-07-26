@@ -10,6 +10,7 @@ Encore
     .setOutputPath('public/build/')
     .setPublicPath('/build')
     .addEntry('app', './assets/js/app.js')
+    .addEntry('inline', './assets/js/inline.js')
     .splitEntryChunks()
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()

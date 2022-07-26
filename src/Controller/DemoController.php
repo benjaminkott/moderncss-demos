@@ -10,10 +10,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Form\DemoType;
 use App\Service\DemoService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -33,15 +31,24 @@ class DemoController extends AbstractController
     /**
      * @Route("/{identifier}", name="show")
      */
-    public function show(Request $request, ?string $identifier): Response
+    public function show(?string $identifier): Response
     {
         $demo = $this->demoService->get($identifier);
-        $form = $this->createForm(DemoType::class, $demo);
-        $form->handleRequest($request);
 
         return $this->render('demo/show.html.twig', [
             'demo' => $demo,
-            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/inline/{identifier}", name="inline")
+     */
+    public function inline(?string $identifier): Response
+    {
+        $demo = $this->demoService->get($identifier);
+
+        return $this->render('demo/inline.html.twig', [
+            'demo' => $demo,
         ]);
     }
 }

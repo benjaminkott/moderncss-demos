@@ -3,21 +3,8 @@
 {% block body %}
 
     <div class="demo-container">
-        {# <div class="demo-form">
-            {{ form_start(form) }}
-                <div class="row">
-                    <div class="col">
-                        {{ form_row(form.styles) }}
-                    </div>
-                    <div class="col">
-                        {{ form_row(form.content) }}
-                    </div>
-                </div>
-                {{ form_rest(form) }}
-            {{ form_end(form) }}
-        </div> #}
         <div class="demo-preview">
-            {{ demo|raw }}
+            <iframe src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
         </div>
     </div>
 

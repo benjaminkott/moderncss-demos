@@ -14,8 +14,8 @@ class DemoDto
 {
     protected string $identifer;
     protected string $name;
-    protected string $content;
-    protected string $styles;
+    protected string $content = '';
+    protected string $styles = '';
     protected array $images = [];
 
     public function setIdentifier(string $identifer): self
@@ -64,15 +64,5 @@ class DemoDto
     public function getStyles(): string
     {
         return $this->styles;
-    }
-
-    public function render(): string
-    {
-        return '<demo-container content="' . htmlspecialchars($this->getContent()) . '" styles="' . htmlspecialchars($this->getStyles()) . '"></demo-container>';
-    }
-
-    public function __toString(): string
-    {
-        return $this->render();
     }
 }

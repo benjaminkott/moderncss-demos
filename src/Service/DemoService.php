@@ -68,10 +68,7 @@ class DemoService
             $demo->setName($config['name'] ?? $identifier);
             $demo->setContent($this->environment->render('demos/' . $identifier . '/index.html.twig', $data));
             if (file_exists($directory->getPathname() . '/styles.css')) {
-                $demo->setStyles(
-                    '*, :after, :before { box-sizing: border-box; }' . PHP_EOL .
-                    file_get_contents($directory->getPathname() . '/styles.css')
-                );
+                $demo->setStyles(file_get_contents($directory->getPathname() . '/styles.css'));
             }
 
             $demos->add($demo);
