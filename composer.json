@@ -51,7 +51,6 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.9",
         "symfony/debug-bundle": "^5.4",
-        "symfony/maker-bundle": "^1.43",
-        "symfony/web-profiler-bundle": "^5.4"
+        "symfony/maker-bundle": "^1.43"
     }
 }

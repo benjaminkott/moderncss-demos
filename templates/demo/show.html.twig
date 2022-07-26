@@ -3,9 +3,6 @@
 {% block body %}
 
     <div class="demo-container">
-        <div class="demo-preview">
-            {{ demo|raw }}
-        </div>
         <div class="demo-form">
             {{ form_start(form) }}
                 <div class="row">
@@ -18,6 +15,9 @@
                 </div>
                 {{ form_rest(form) }}
             {{ form_end(form) }}
+        </div>
+        <div class="demo-preview">
+            {{ demo|raw }}
         </div>
     </div>
 

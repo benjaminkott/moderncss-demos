@@ -1,6 +1,7 @@
 .demo-container {
     display: flex;
     flex-direction: column;
+    position: relative;
     height: 100%;
     width: 100%;
 }
@@ -11,10 +12,14 @@
     align-items: center;
     background-color: #1e1e1e;
     padding: 1rem;
+    overflow: auto;
+    @media (prefers-color-scheme: dark) {
+        color-scheme: dark;
+    }
     demo-container {
         border: 2px solid #414141;
         border-radius: 5px;
-        resize: both;
+        resize: horizontal;
         overflow: auto;
         padding: 1rem;
         display: block;
@@ -27,7 +32,7 @@
     color: #ffffff;
     background-color: #252526;
     font-size: 12px;
-
+    box-shadow: 0 0 2px 2px rgb(0, 0, 0, .25);
 
     .btn,
     .form-control {

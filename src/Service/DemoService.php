@@ -60,6 +60,7 @@ class DemoService
             $config = Yaml::parseFile($directory->getPathname() . '/config.yaml');
 
             $data = [];
+            $data['identifier'] = $identifier;
             $data['data'] = $config['data'] ?? [];
 
             $demo = new DemoDto();
