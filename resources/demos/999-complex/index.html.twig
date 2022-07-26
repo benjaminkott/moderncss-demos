@@ -1,0 +1,41 @@
+
+<div class="vcard-grid">
+
+    {% for vcard in data.vcards %}
+    {% include 'demos/' ~ identifier ~ '/_vcard.html.twig' with { 'vcard': vcard } only %}
+    {% endfor %}
+
+</div>
+
+<style>
+    .vcard-grid {
+        container-type: inline-size;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .vcard-grid .vcard {
+        grid-column: span 3;
+    }
+    @container (min-width: 400px) {
+        .vcard-grid .vcard:first-child {
+            grid-column: span 6;
+        }
+        .vcard-grid .vcard {
+            grid-column: span 2;
+        }
+    }
+    @container (min-width: 800px) {
+        .vcard-grid .vcard {
+            grid-column: span 1;
+        }
+        .vcard-grid .vcard:first-child {
+            grid-column: 1 / span 4;
+        }
+        .vcard-grid .vcard:nth-child(2) {
+            grid-column: 5 / span 2;
+        }
+    }
+</style>

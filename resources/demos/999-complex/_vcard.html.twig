@@ -1,0 +1,34 @@
+<div class="vcard">
+    <div class="vcard-container">
+        <div class="vcard-image">
+            <img src="{{ vcard.image }}" width="400" height="400" loading="lazy">
+        </div>
+        <div class="vcard-body">
+            <div class="vcard-header">
+                <div class="vcard-name">{{ vcard.name }}</div>
+                <div class="vcard-info">
+                    <div class="vcard-job">{{ vcard.job }}</div>
+                    <div class="vcard-location">{{ vcard.location }}</div>
+                </div>
+            </div>
+            <div class="vcard-bio">{{ vcard.bio }}</div>
+            <div class="vcard-social">
+                <a href="#">
+                    <svg class="vcard-icon" role="img">
+                        <use href="/assets/actions.svg#actions-brand-twitter" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="vcard-icon" role="img">
+                        <use href="/assets/actions.svg#actions-brand-facebook" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="vcard-icon" role="img">
+                        <use href="/assets/actions.svg#actions-brand-instagram" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
