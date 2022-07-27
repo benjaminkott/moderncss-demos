@@ -35,6 +35,7 @@
     display: block;
     width: auto;
     max-height: 100%;
+    max-width: 100%;
     border-radius: 50%;
 }
 .vcard-body {
