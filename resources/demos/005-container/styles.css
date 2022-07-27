@@ -139,8 +139,6 @@
         --vcard-name-font-size: 1.5rem;
         --vcard-bio-font-size: 1rem;
         --vcard-icon-size: 1.5rem;
-    }
-    .vcard-container {
         flex-direction: row;
     }
     .vcard-image {
