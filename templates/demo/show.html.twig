@@ -7,7 +7,14 @@
             <iframe id="demo-preview" src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
         </div>
         <div class="demo-control">
-            <input type="range" min="1" max="100" value="100" id="demo-preview-control" step="1">
+            <div class="d-flex">
+                <label for="demo-preview-control" style="width: 150px">Frame</label>
+                <input type="range" min="1" max="100" value="100" id="demo-preview-control" step="1">
+            </div>
+            <div class="d-flex">
+                <label for="demo-preview-inner-control" style="width: 150px">Inner</label>
+                <input type="range" min="1" max="100" value="100" id="demo-preview-inner-control" step="1">
+            </div>
         </div>
     </div>
 

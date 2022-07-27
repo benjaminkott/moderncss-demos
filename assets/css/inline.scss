@@ -14,3 +14,10 @@ body {
         background: #212121;
     }
 }
+
+.demo-contanier[style]:not([style="width: 100%;"]) {
+    outline-style: dashed;
+    outline-offset: 1px;
+    outline-width: 1px;
+    margin: 0 auto;
+}
