@@ -1,0 +1,34 @@
+<div class="form-grid">
+    <div class="form-grid-column">
+        {% include 'demos/' ~ identifier ~ '/_inputgroup.html.twig' %}
+    </div>
+    <div class="form-grid-column" style="--accent-color: #9c27b0;">
+        {% include 'demos/' ~ identifier ~ '/_inputgroup.html.twig' %}
+    </div>
+    <div class="form-grid-column" style="--accent-color: #03a9f4;">
+        {% include 'demos/' ~ identifier ~ '/_inputgroup.html.twig' %}
+    </div>
+    <div class="form-grid-column" style="--accent-color: #7cb342;">
+        {% include 'demos/' ~ identifier ~ '/_inputgroup.html.twig' %}
+    </div>
+</div>
+
+<style>
+    label {
+        display: block;
+    }
+    .form-grid {
+        margin: 0 auto;
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .form-section {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        border: 1px dotted;
+    }
+</style>

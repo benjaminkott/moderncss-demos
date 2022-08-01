@@ -1,0 +1,8 @@
+body {
+    --accent-color: unset;
+}
+
+input,
+progress {
+    accent-color: var(--accent-color);
+}

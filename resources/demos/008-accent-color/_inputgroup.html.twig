@@ -1,0 +1,39 @@
+{% set variant = random() %}
+<div class="form-section">
+    <div class="form-group">
+        <div class="form-check">
+            <label for="checkbox_{{ variant }}_1">
+                <input id="checkbox_{{ variant }}_1" name="checkbox_{{ variant }}" type="checkbox" checked="checked" />
+                Checkbox 1
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="checkbox_{{ variant }}_2">
+                <input id="checkbox_{{ variant }}_2" name="checkbox_{{ variant }}" type="checkbox" />
+                Checkbox 2
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <label for="radio_{{ variant }}_1">
+                <input id="radio_{{ variant }}_1" name="radio_{{ variant }}" type="radio" checked="checked" />
+                Radio 1
+            </label>
+        </div>
+        <div class="form-check">
+            <label for="radio_{{ variant }}_2">
+                <input id="radio_{{ variant }}_2" name="radio_{{ variant }}" type="radio" />
+                Radio 2
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="range_{{ variant }}">Range</label>
+        <input id="range" name="range_{{ variant }}" type="range" />
+    </div>
+    <div class="form-group">
+        <label for="progress">Progress</label>
+        <progress id="progress" name="progress_{{ variant }}" max="100" value="70">70%</progress>
+    </div>
+</div>
