@@ -9,6 +9,7 @@
 
 <style>
     .vcard-grid {
+        container-name: vcard-grid;
         container-type: inline-size;
         display: grid;
         gap: 1rem;
@@ -16,25 +17,25 @@
         max-width: 900px;
         margin: 0 auto;
     }
-    .vcard-grid .vcard {
+    .vcard {
         grid-column: span 3;
     }
-    @container (min-width: 400px) {
-        .vcard-grid .vcard:first-child {
+    @container vcard-grid (min-width: 400px) {
+        .vcard:first-child {
             grid-column: span 6;
         }
-        .vcard-grid .vcard {
+        .vcard {
             grid-column: span 2;
         }
     }
-    @container (min-width: 800px) {
-        .vcard-grid .vcard {
+    @container vcard-grid (min-width: 800px) {
+        .vcard {
             grid-column: span 1;
         }
-        .vcard-grid .vcard:first-child {
+        .vcard:first-child {
             grid-column: 1 / span 4;
         }
-        .vcard-grid .vcard:nth-child(2) {
+        .vcard:nth-child(2) {
             grid-column: 5 / span 2;
         }
     }
