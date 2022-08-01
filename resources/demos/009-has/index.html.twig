@@ -1,0 +1,7 @@
+<div class="article-grid">
+
+    {% for article in data.articles %}
+    {% include 'shared/_article.html.twig' with { 'article': article } only %}
+    {% endfor %}
+
+</div>

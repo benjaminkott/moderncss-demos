@@ -1,0 +1,24 @@
+name: Has
+data:
+    articles:
+        -
+            title: Praesent faucibus sollicitudin porttitor
+            abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: http://placeimg.com/640/480/tech
+        -
+            title: Integer convallis tortor ac enim
+            abstract: Mauris ante lorem, sagittis eu purus id, finibus tempor quam. Suspendisse eu viverra neque. Vivamus aliquet lorem lorem, a vestibulum justo venenatis at. Nunc turpis nisi, tempus elementum tellus sit amet, viverra finibus nisi.
+        -
+            title: In hac habitasse platea dictumst
+            abstract: Vivamus a orci molestie, dictum orci eu, gravida lacus. Praesent vulputate, turpis id efficitur aliquam, diam ante luctus sapien, quis condimentum nisi orci ac mi. Praesent varius quam orci, ut mollis libero mattis id.
+        -
+            title: Mauris eget convallis diam
+            abstract: Nam commodo, mauris iaculis dictum consequat, risus tortor placerat massa, sed scelerisque tortor mauris non velit. Donec eu augue molestie, tempus velit in, congue ligula. Maecenas finibus nisi massa, et semper ipsum viverra a. Mauris pellentesque mi sed mauris maximus, in ultrices dui maximus.
+            image: http://placeimg.com/640/480/tech
+        -
+            title: Vestibulum at porta ante
+            abstract: Nulla in rutrum enim, eget semper lectus. Etiam congue at ex non elementum. Donec eu quam urna. Quisque sed ornare felis. Nam nec nunc quis lorem varius laoreet. Etiam egestas tincidunt dolor ut auctor. Quisque non magna aliquam, consectetur lorem vel, luctus enim.
+            image: http://placeimg.com/640/480/tech
+        -
+            title: Nam iaculis sem iaculis laoreet
+            abstract: Aliquam erat volutpat. Nullam ullamcorper ligula eget lacus posuere ullamcorper. Donec non libero varius, sodales risus facilisis, finibus felis. Curabitur mollis, ex et tempus commodo, purus diam iaculis purus, in lacinia metus magna quis lacus. Quisque vel nisl lectus.

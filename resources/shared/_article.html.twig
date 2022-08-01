@@ -1,0 +1,11 @@
+<div class="article">
+    {% if article.image is defined %}
+    <div class="article-image">
+        <img src="{{ article.image }}" width="640" height="480" aspect-ratio="16/9">
+    </div>
+    {% endif %}
+    <div class="article-body">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.abstract }}</p>
+    </div>
+</div>
