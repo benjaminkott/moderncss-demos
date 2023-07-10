@@ -15,9 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("", name="app_application_")
- */
+#[Route('', name: 'app_application_')]
 class ApplicationController extends AbstractController
 {
     private DemoService $demoService;
@@ -28,9 +26,7 @@ class ApplicationController extends AbstractController
         $this->demoService = $demoService;
     }
 
-    /**
-     * @Route("", name="index")
-     */
+    #[Route('', name: 'index')]
     public function index(): Response
     {
         return $this->render('application/index.html.twig', [

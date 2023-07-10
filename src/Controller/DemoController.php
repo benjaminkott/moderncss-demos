@@ -15,9 +15,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/demo", name="app_demo_")
- */
+#[Route('/demo', name: 'app_demo_')]
 class DemoController extends AbstractController
 {
     private DemoService $demoService;
@@ -28,9 +26,7 @@ class DemoController extends AbstractController
         $this->demoService = $demoService;
     }
 
-    /**
-     * @Route("/{identifier}", name="show")
-     */
+    #[Route('/{identifier}', name: 'show')]
     public function show(?string $identifier): Response
     {
         $demo = $this->demoService->get($identifier);
@@ -40,9 +36,7 @@ class DemoController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/inline/{identifier}", name="inline")
-     */
+    #[Route('/inline/{identifier}', name: 'inline')]
     public function inline(?string $identifier): Response
     {
         $demo = $this->demoService->get($identifier);

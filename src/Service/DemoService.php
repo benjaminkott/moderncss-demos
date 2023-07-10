@@ -30,7 +30,7 @@ class DemoService
         $this->environment = $environment;
     }
 
-    public function get(?string $identifier = null): ?DemoDto
+    public function get(string $identifier = null): ?DemoDto
     {
         $criteria = Criteria::create();
         $criteria->andWhere(Criteria::expr()->eq('identifier', $identifier));
