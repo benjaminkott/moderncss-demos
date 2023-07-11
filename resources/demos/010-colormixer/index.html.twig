@@ -1,0 +1,71 @@
+<div id="colormixer" class="colormixer">
+    <div class="colorpreview colorpreview-a">
+        <div class="colorpreview-data">
+            <div class="colorpreview-data-light">
+                <div data-colorpicker-value="--color-a-value"></div>
+                <div data-colorpicker-value="--color-a-percent"></div>
+            </div>
+            <div class="colorpreview-data-dark">
+                <div data-colorpicker-value="--color-a-value"></div>
+                <div data-colorpicker-value="--color-a-percent"></div>
+            </div>
+        </div>
+    </div>
+    <div class="colorpreview colorpreview-b">
+        <div class="colorpreview-data">
+            <div class="colorpreview-data-light">
+                <div data-colorpicker-value="--color-b-value"></div>
+                <div data-colorpicker-value="--color-b-percent"></div>
+            </div>
+            <div class="colorpreview-data-dark">
+                <div data-colorpicker-value="--color-b-value"></div>
+                <div data-colorpicker-value="--color-b-percent"></div>
+            </div>
+        </div>
+    </div>
+    <div class="colorresult">
+        <div class="colorresult-inner">
+        </div>
+    </div>
+    <div class="colorcontrol">
+        <div>
+            <input
+                id="colorpicker-a-value"
+                class="colorpicker"
+                type="input"
+                name="colorpicker-a"
+                value="{{ data.colorA }}"
+                data-variable="--color-a-value"
+            >
+            <input
+                id="colorpicker-a-percent"
+                type="range"
+                min="1"
+                max="100"
+                step="1"
+                value="100"
+                data-variable="--color-a-percent"
+            >
+        </div>
+        <div>
+            <input
+                id="colorpicker-b-value"
+                class="colorpicker"
+                type="input"
+                name="colorpicker-b"
+                value="{{ data.colorB }}"
+                data-variable="--color-b-value"
+            >
+            <input
+                id="colorpicker-b-percent"
+                type="range"
+                min="1"
+                max="100"
+                step="1"
+                value="100"
+                data-variable="--color-b-percent"
+            >
+        </div>
+    </div>
+</div>
+

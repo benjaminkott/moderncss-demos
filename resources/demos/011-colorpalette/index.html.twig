@@ -1,0 +1,35 @@
+<div class="colorpalettes-list">
+    {% for color in data.colors %}
+    <div class="colorpalettes-group">
+        <h3 class="colorpalettes-header">
+            <span class="colorbox" style="--colorbox-bg: {{ color }};"></span>
+            {{ color }}
+        </h3>
+        <div class="colorpalettes" style="--color-primary-value: {{ color }};">
+            {% for space in data.spaces %}
+                <div class="colorpalette" style="--color-space: {{ space }};">
+                    <div class="colorheader">{{ space }}</div>
+                    {% for percent in data.percentages|reverse %}
+                        {% if percent != '100%' %}
+                        <div class="color" style="--color-primary-percent: {{ percent }}; --color-secondary-value: black;"></div>
+                        {% endif %}
+                    {% endfor %}
+                    {% for percent in data.percentages %}
+                        {% if percent != '0%' %}
+                        <div class="color" style="--color-secondary-percent: {{ percent }}; --color-secondary-value: black;"></div>
+                        {% endif %}
+                    {% endfor %}
+                    {% for percent in data.percentages|reverse %}
+                        {% if percent != '100%' %}
+                        <div class="color" style="--color-secondary-percent: {{ percent }}; --color-secondary-value: white;"></div>
+                        {% endif %}
+                    {% endfor %}
+                    {% for percent in data.percentages %}
+                        <div class="color" style="--color-primary-percent: {{ percent }}; --color-secondary-value: white;"></div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

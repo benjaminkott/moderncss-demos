@@ -70,6 +70,9 @@ class DemoService
             if (file_exists($directory->getPathname() . '/styles.css')) {
                 $demo->setStyles(file_get_contents($directory->getPathname() . '/styles.css'));
             }
+            if (file_exists($directory->getPathname() . '/scripts.js')) {
+                $demo->setScripts(file_get_contents($directory->getPathname() . '/scripts.js'));
+            }
 
             $demos->add($demo);
         }

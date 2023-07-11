@@ -1,0 +1,4 @@
+name: Color Mixer
+data:
+    colorA: '#ff8700'
+    colorB: '#000000'

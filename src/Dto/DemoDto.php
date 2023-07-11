@@ -16,7 +16,7 @@ class DemoDto
     protected string $name;
     protected string $content = '';
     protected string $styles = '';
-    protected array $images = [];
+    protected string $scripts = '';
 
     public function setIdentifier(string $identifer): self
     {
@@ -64,5 +64,17 @@ class DemoDto
     public function getStyles(): string
     {
         return $this->styles;
+    }
+
+    public function setScripts(string $scripts): self
+    {
+        $this->scripts = $scripts;
+
+        return $this;
+    }
+
+    public function getScripts(): string
+    {
+        return $this->scripts;
     }
 }
