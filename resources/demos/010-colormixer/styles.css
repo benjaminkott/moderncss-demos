@@ -18,6 +18,8 @@
         'colorresult colorresult' 1fr
         'colorcontrol colorcontrol' auto
     ;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .colorpreview {

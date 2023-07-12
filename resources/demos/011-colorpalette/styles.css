@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .colorpalettes-group {
@@ -53,7 +55,7 @@
 
 .color {
     flex-grow: 1;
-    height: 3rem;
+    height: 2rem;
     text-align: right;
     background-color: color-mix(
         in var(--color-space),

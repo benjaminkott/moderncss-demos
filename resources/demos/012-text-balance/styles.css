@@ -1,0 +1,48 @@
+:root {
+    --article-border-radius: 5px;
+    --article-spacing: 1.5rem;
+    --article-color: #313131;
+    --article-bg: #fff;
+    --article-shadow: 0 0 2px 1px rgb(0 0 0 / 25%);
+}
+
+.article-grid {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.article {
+    color: var(--article-color);
+    border-radius: var(--article-border-radius);
+    background: var(--article-bg);
+    box-shadow: var(--article-shadow);
+    overflow: hidden;
+}
+
+.article h2 {
+    line-height: 1.25;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+.article p {
+    margin: 0;
+}
+
+.article p + p {
+    margin-top: .5em;
+}
+
+.article-body {
+    padding: var(--article-spacing);
+}
+
+.form {
+    padding: 1rem;
+}
+
+.form select {
+    display: block;
+    margin: 0 auto;
+    padding: .5rem;
+}
