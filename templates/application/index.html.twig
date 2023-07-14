@@ -2,15 +2,13 @@
 {% block body %}
 
 <div class="container">
-    {% for demo in demos %}
-        <div class="card">
-            <div class="card-body">
-                <a href="{{ path('app_demo_show', { 'identifier': demo.identifier }) }}">
-                    {{ demo.name }}
-                </a>
-            </div>
-        </div>
-    {% endfor %}
+    <div class="list-group my-5">
+        {% for demo in demos %}
+            <a class="list-group-item list-group-item-action" href="{{ path('app_demo_show', { 'identifier': demo.identifier }) }}">
+                {{ demo.name }}
+            </a>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}
