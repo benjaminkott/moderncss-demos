@@ -1,0 +1,12 @@
+.logolist {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
