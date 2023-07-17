@@ -1,0 +1,69 @@
+:root {
+    --grid-spacing: .5rem;
+
+    --card-border-radius: 5px;
+    --card-padding: 1rem;
+    --card-color: #313131;
+    --card-bg: #fff;
+    --card-shadow: 0 0 2px 1px rgb(0 0 0 / 25%);
+}
+
+* {
+    text-wrap: balance;
+}
+
+.card {
+    color: var(--card-color);
+    padding: var(--card-padding);
+    background-color: var(--card-bg);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.card p {
+    margin-top: .25em;
+    margin-bottom: 0;
+}
+
+.card-grid {
+    margin: 0 auto;
+    max-width: 900px;
+    container-type: inline-size;
+    container-name: card-grid;
+    display: grid;
+    gap: var(--grid-spacing);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card-section,
+.card-section-cards {
+    display: contents;
+}
+
+.card-section > h1 {
+    margin: .5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: color-mix(in srgb, var(--card-bg), white 25%) wavy underline;
+}
+
+.card-section-a {
+    --card-color: #fff;
+    --card-bg: #313131;
+}
+
+.card-section-b {
+    --card-color: #fff;
+    --card-bg: #324e41;
+}
+
+.card-section-c {
+    --card-color: #fff;
+    --card-bg: #40324e;
+}
