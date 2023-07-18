@@ -25,7 +25,7 @@ Encore
     })
     .addPlugin(
         new MonacoWebpackPlugin({
-            languages: ['css']
+            languages: ['css', 'html', 'javascript']
         }
     ))
 ;

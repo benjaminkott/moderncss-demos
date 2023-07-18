@@ -7,8 +7,41 @@
             <iframe id="demo-preview" src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
         </div>
         <div class="demo-editors">
-            <div>
-                <div id="demo-preview-styles" class="demo-preview-editor"><textarea>{{ demo.styles }}</textarea></div>
+            <div class="demo-editors-inner">
+
+                <div class="demo-editor-section active">
+                    <button
+                        class="demo-editor-section-label"
+                        data-section="css"
+                        >
+                        CSS
+                    </button>
+                    <div
+                        class="demo-editor-section-editor"
+                        data-editor="true"
+                        data-language="css"
+                        data-target="#demo-styles"
+                        >
+                        <textarea>{{ demo.styles }}</textarea>
+                    </div>
+                </div>
+                <div class="demo-editor-section">
+                    <button
+                        class="demo-editor-section-label"
+                        data-section="html"
+                        >
+                        HTML
+                    </button>
+                    <div
+                        class="demo-editor-section-editor"
+                        data-editor="true"
+                        data-language="html"
+                        data-target="#demo-inner"
+                        >
+                        <textarea>{{ demo.content }}</textarea>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="demo-control">
