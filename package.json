@@ -8,9 +8,9 @@
         "core-js": "^3.31",
         "lit": "^2.7",
         "lit-element": "^3.3",
+        "regenerator-runtime": "^0.13",
         "sass": "^1.63",
         "sass-loader": "^13.3",
-        "regenerator-runtime": "^0.13",
         "webpack": "^5.88",
         "webpack-cli": "^5.1",
         "webpack-notifier": "^1.15.0"
@@ -22,5 +22,9 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "monaco-editor": "^0.40.0",
+        "monaco-editor-webpack-plugin": "^7.1.0"
     }
 }

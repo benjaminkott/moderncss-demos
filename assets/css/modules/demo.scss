@@ -1,18 +1,23 @@
 .demo-container {
-    display: flex;
-    flex-direction: column;
+    padding: 1rem;
+    display: grid;
     position: relative;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        'editors preview'
+        'editors control';
     height: 100%;
     width: 100%;
     background-color: #1e1e1e;
     color: #ffffff;
+    gap: 1rem;
 }
 .demo-preview {
-    flex-grow: 1;
+    grid-area: preview;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
     iframe {
         display: block;
         height: 100%;
@@ -24,10 +29,25 @@
         }
     }
 }
-.demo-control {
-    padding: 1rem;
-    padding-top: 0;
+.demo-editors {
+    grid-area: editors;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
+    textarea {
+        height: 0;
+        opacity: 0;
+        width: 0;
+    }
+}
+.demo-preview-editor {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #414141;
+    height: 100%;
+    width: 100%;
+}
+.demo-control {
     [type="range"] {
         width: 100%;
     }

@@ -6,6 +6,11 @@
         <div class="demo-preview">
             <iframe id="demo-preview" src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
         </div>
+        <div class="demo-editors">
+            <div>
+                <div id="demo-preview-styles" class="demo-preview-editor"><textarea>{{ demo.styles }}</textarea></div>
+            </div>
+        </div>
         <div class="demo-control">
             <div class="d-flex">
                 <label for="demo-preview-control" style="width: 150px">Frame</label>

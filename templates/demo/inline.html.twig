@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>{{ demo.name }}</title>
     {{ encore_entry_link_tags('inline') }}
-    <style>
+    <style id="demo-styles">
         {{ demo.styles|raw }}
     </style>
 </head>
@@ -13,7 +13,7 @@
     {{ demo.content|raw }}
     </div>
     {{ encore_entry_script_tags('inline') }}
-    <script>
+    <script id="demo-scripts">
         {{ demo.scripts|raw }}
     </script>
 </body>
