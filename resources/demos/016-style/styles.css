@@ -1,0 +1,110 @@
+:root {
+    --product-bg: #313131;
+    --product-color: #ffffff;
+    --product-padding: .75rem;
+    --product-border-radius: .25rem;
+    --product-shadow: 0 0 2px 1px rgb(0 0 0 / 25%);
+    --product-size: small;
+}
+
+.product-list {
+    container-type: inline-size;
+    container-name: list;
+    display: grid;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.product-card {
+    position: relative;
+    color: var(--product-color);
+    background-color: var(--product-bg);
+    border-radius: var(--product-border-radius);
+    overflow: hidden;
+    box-shadow: var(--product-shadow);
+    height: 100%;
+}
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.product-body {
+    position: relative;
+    padding: var(--product-padding);
+}
+
+@container list (min-width: 500px) {
+    .product {
+        --product-size: medium;
+    }
+}
+
+@container style(--product-size: medium) {
+    .product-title {
+        font-weight: bold;
+    }
+    .product-body:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ff0000;
+        height: 10rem;
+        user-select: none;
+        background: linear-gradient(
+            to bottom,
+            transparent 0,
+            var(--product-bg) 100%
+        );
+    }
+}
+
+@container style(--status: new) {
+    .product-card:before {
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        display: block;
+        content: 'NEW';
+        font-size: 12px;
+        font-weight: bold;
+        background-color: #b31010;
+        color: #fff;
+        padding: .25rem .5rem;
+        border-radius: .25rem;
+    }
+}
+
+@container style(--season: spring) {
+    .product-card {
+        --product-bg: #c4dd77;
+        --product-color: #000;
+    }
+}
+
+@container style(--season: summer) {
+    .product-card {
+        --product-bg: #ddcd77;
+        --product-color: #000;
+    }
+}
+
+@container style(--season: autumn) {
+    .product-card {
+        --product-bg: #a08769;
+        --product-color: #000;
+    }
+}
+
+@container style(--season: winter) {
+    .product-card {
+        --product-bg: #aec6cf;
+        --product-color: #000;
+    }
+}

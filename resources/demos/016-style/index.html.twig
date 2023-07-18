@@ -1,0 +1,12 @@
+<div class="product-list">
+    {% for product in data.products %}
+        <div class="product" style="--season: {{ product.season }}; --status: {{ product.status }};">
+            <div class="product-card">
+                <img class="product-image" src="{{ product.image }}">
+                <div class="product-body">
+                    <div class="product-title">{{ product.name }}</div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
