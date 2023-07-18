@@ -12,6 +12,7 @@ previewInnerControl.addEventListener('input', (event) => {
     preview.contentDocument.querySelector('#demo-inner').style.width = event.target.value + '%';
 });
 
+window.previeweditors = [];
 document.querySelectorAll('[data-editor="true"]').forEach((element) => {
     // Tabs
     const button = element.parentElement.querySelector('button[data-section]').addEventListener('click', (event) => {
@@ -39,5 +40,29 @@ document.querySelectorAll('[data-editor="true"]').forEach((element) => {
     })
     editor.onDidChangeModelContent((event) => {
         preview.contentDocument.querySelector(target).innerHTML = editor.getValue();
+    });
+    window.previeweditors.push(editor);
+});
+
+document.querySelectorAll('button[data-preview-split-editor]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+        const editorWidth = event.target.dataset.previewSplitEditor;
+        const previewWidth = event.target.dataset.previewSplitPreview;
+        const root = document.getElementById('demo-root');
+
+        root.style.setProperty('--columns-editor', editorWidth);
+        root.style.setProperty('--columns-preview', previewWidth);
+    });
+});
+
+document.querySelectorAll('button[data-editor-modify-fontsize]').forEach((button) => {
+    button.addEventListener('click', (event) => {
+        window.previeweditors.forEach(editor => {
+            let options = {
+                fontSize: editor.getRawOptions().fontSize + parseInt(event.target.dataset.editorModifyFontsize)
+            }
+            console.log(options);
+            editor.updateOptions(options);
+        });
     });
 });

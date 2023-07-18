@@ -94,6 +94,22 @@
     width: 100%;
 }
 .demo-control {
+    border: 2px solid #414141;
+    padding: .5rem .75rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 10px;
+
+    &-size,
+    &-split {
+        flex-shrink: 0;
+    }
+
+    &-width {
+        flex-grow: 1;
+    }
+
     [type="range"] {
         width: 100%;
     }
