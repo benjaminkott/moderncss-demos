@@ -46,6 +46,11 @@ document.querySelectorAll('[data-editor="true"]').forEach((element) => {
 
 document.querySelectorAll('button[data-preview-split-editor]').forEach((button) => {
     button.addEventListener('click', (event) => {
+        document.querySelectorAll('button[data-preview-split-editor]').forEach((element) => {
+            element.classList.remove('active');
+        });
+        button.classList.add('active');
+
         const editorWidth = event.target.dataset.previewSplitEditor;
         const previewWidth = event.target.dataset.previewSplitPreview;
         const root = document.getElementById('demo-root');
@@ -61,7 +66,6 @@ document.querySelectorAll('button[data-editor-modify-fontsize]').forEach((button
             let options = {
                 fontSize: editor.getRawOptions().fontSize + parseInt(event.target.dataset.editorModifyFontsize)
             }
-            console.log(options);
             editor.updateOptions(options);
         });
     });
