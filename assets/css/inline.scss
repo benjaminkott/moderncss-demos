@@ -7,12 +7,15 @@
 :root {
     --demo-padding-x: 1.5rem;
     --demo-padding-y: 1.5rem;
+    --demo-bg: #dadada;
+    --demo-color: #313131;
 }
 
 body {
     margin: 0;
     padding: var(--demo-padding-y) var(--demo-padding-x);
-    background: #dadada;
+    color: var(--demo-color);
+    background: var(--demo-bg);
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
@@ -35,10 +38,13 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --demo-bg: #212121;
+        --demo-color: #dadada;
+    }
     html,
     body {
         color-scheme: dark;
-        background: #212121;
     }
     .demo-not-supported {
         border-color: #842029;

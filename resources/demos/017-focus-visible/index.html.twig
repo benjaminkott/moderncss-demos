@@ -1,0 +1,79 @@
+{% macro demo() %}
+        {% set variant = random() %}
+        <div class="focus-section">
+            <p style="margin-bottom: 0;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nulla odio ex, <a href="#">vitae mattis eget</a>, lobortis in ligula.
+                Pellentesque finibus congue vulputate.
+            </p>
+        </div>
+        <div class="focus-section">
+            <input type="text">
+        </div>
+        <div class="focus-section">
+            <div class="form-check">
+                <label for="checkbox_{{ variant }}_1">
+                    <input id="checkbox_{{ variant }}_1" name="checkbox_{{ variant }}" type="checkbox" checked="checked" />
+                    Checkbox 1
+                </label>
+            </div>
+            <div class="form-check">
+                <label for="checkbox_{{ variant }}_2">
+                    <input id="checkbox_{{ variant }}_2" name="checkbox_{{ variant }}" type="checkbox" />
+                    Checkbox 2
+                </label>
+            </div>
+        </div>
+        <div class="focus-section">
+            <div class="form-check">
+                <label for="radio_{{ variant }}_1">
+                    <input id="radio_{{ variant }}_1" name="radio_{{ variant }}" type="radio" checked="checked">
+                    Radio 1
+                </label>
+            </div>
+            <div class="form-check">
+                <label for="radio_{{ variant }}_2">
+                    <input id="radio_{{ variant }}_2" name="radio_{{ variant }}" type="radio">
+                    Radio 2
+                </label>
+            </div>
+        </div>
+        <div class="focus-section">
+            <input type="range" min="1" max="100" value="50" id="demo-preview-control" step="1">
+        </div>
+        <div class="focus-section">
+            <textarea></textarea>
+        </div>
+        <div class="focus-section">
+            <select name="pets">
+                <option value=""></option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster">Hamster</option>
+                <option value="parrot">Parrot</option>
+                <option value="spider">Spider</option>
+                <option value="goldfish">Goldfish</option>
+            </select>
+        </div>
+        <div class="focus-section">
+            <button>Demo</button>
+        </div>
+{% endmacro %}
+
+<div class="focus-demo">
+    <div class="focus-none">
+        <div class="focus-section">
+            <strong>None</strong>
+        </div>{{ _self.demo() }}
+    </div>
+    <div class="focus-normal">
+        <div class="focus-section">
+            <strong>Normal</strong>
+        </div>{{ _self.demo() }}
+    </div>
+    <div class="focus-visible">
+        <div class="focus-section">
+            <strong>Visible</strong>
+        </div>{{ _self.demo() }}
+    </div>
+</div>

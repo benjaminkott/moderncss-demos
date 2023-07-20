@@ -1,0 +1,105 @@
+:root {
+    --highlight-color: #689f38;
+    --text-color: #ffffff;
+
+    --link-color: color-mix(in srgb, var(--highlight-color), var(--demo-color));
+    --link-hover-color: color-mix(in srgb, var(--highlight-color), var(--demo-color) 25%);
+    --link-focus-color: color-mix(in srgb, var(--highlight-color), var(--demo-color) 0%);
+
+    --input-color: var(--demo-color);
+    --input-bg: var(--demo-bg);
+    --input-border-color: color-mix(in srgb, var(--demo-color), var(--demo-bg));
+    --input-hover-border-color: color-mix(in srgb, var(--highlight-color), var(--input-border-color));
+    --input-focus-border-color: var(--highlight-color);
+}
+
+*:focus {
+    --input-border-color: var(--input-focus-border-color);
+    z-index: 1;
+    outline: 0;
+}
+
+a {
+    color: var(--link-color);
+}
+a:hover {
+    --link-color: var(--link-hover-color);
+}
+a:focus {
+    --link-color: var(--link-focus-color);
+}
+
+label {
+    cursor: pointer;
+}
+
+button,
+input,
+textarea,
+select {
+    display: inline-block;
+    accent-color: var(--highlight-color);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.2;
+    color: var(--input-color);
+    background-color: var(--input-bg);
+    border: 2px solid var(--input-border-color);
+    border-radius: .25rem;
+    padding: .5rem .75rem;
+    margin: 0;
+}
+input[type="text"],
+input[type="range"],
+textarea,
+select {
+    display: block;
+    width: 100%;
+}
+button:hover,
+input:hover,
+textarea:hover,
+select:hover {
+    --input-border-color: var(--input-hover-border-color);
+}
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    --input-border-color: var(--input-focus-border-color);
+}
+
+.focus-normal a:focus,
+.focus-normal button:focus,
+.focus-normal input:focus,
+.focus-normal textarea:focus,
+.focus-normal select:focus {
+    box-shadow:
+        0 0 0 2px black,
+        0 0 0 4px white
+    ;
+}
+
+.focus-visible a:focus-visible,
+.focus-visible button:focus-visible,
+.focus-visible input:focus-visible,
+.focus-visible textarea:focus-visible,
+.focus-visible select:focus-visible {
+    box-shadow:
+        0 0 0 2px black,
+        0 0 0 4px white
+    ;
+}
+
+.focus-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.focus-demo > div {
+    display: grid;
+    gap: 1rem;
+}
