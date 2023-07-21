@@ -67,9 +67,14 @@ class DemoService
             $demo->setIdentifier($identifier);
             $demo->setName($config['name'] ?? $identifier);
             $demo->setContent($this->environment->render('demos/' . $identifier . '/index.html.twig', $data));
+
             if (file_exists($directory->getPathname() . '/styles.css')) {
                 $demo->setStyles(file_get_contents($directory->getPathname() . '/styles.css'));
             }
+            if (file_exists($directory->getPathname() . '/styles.css.twig')) {
+                $demo->setStyles($this->environment->render('demos/' . $identifier . '/styles.css.twig', $data));
+            }
+
             if (file_exists($directory->getPathname() . '/scripts.js')) {
                 $demo->setScripts(file_get_contents($directory->getPathname() . '/scripts.js'));
             }
