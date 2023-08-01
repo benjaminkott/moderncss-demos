@@ -45,7 +45,7 @@ class MenuBuilder
             $menu->addChild(
                 'demo_' . $demo->getIdentifier(),
                 [
-                    'label' => $demo->getName(),
+                    'label' => $demo->getLabel(),
                     'route' => 'app_demo_show',
                     'routeParameters' => [
                         'identifier' => $demo->getIdentifier(),

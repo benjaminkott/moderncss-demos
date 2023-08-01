@@ -5,7 +5,7 @@
     <div class="list-group my-5">
         {% for demo in demos %}
             <a class="list-group-item list-group-item-action" href="{{ path('app_demo_show', { 'identifier': demo.identifier }) }}">
-                {{ demo.name }}
+                {{ demo.label }}
             </a>
         {% endfor %}
     </div>

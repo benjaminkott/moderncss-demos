@@ -14,6 +14,7 @@ class DemoDto
 {
     protected string $identifer;
     protected string $name;
+    protected int $sorting = 0;
     protected string $content = '';
     protected string $styles = '';
     protected string $scripts = '';
@@ -28,6 +29,30 @@ class DemoDto
     public function getIdentifier(): string
     {
         return $this->identifer;
+    }
+
+    public function setSorting(int $sorting): self
+    {
+        $this->sorting = $sorting;
+
+        return $this;
+    }
+
+    public function getLabel(): string
+    {
+        $number = str_pad(
+            (string) $this->getSorting(),
+            3,
+            (string) 0,
+            STR_PAD_LEFT
+        );
+
+        return $number . ' ' . $this->getName();
+    }
+
+    public function getSorting(): int
+    {
+        return $this->sorting;
     }
 
     public function setName(string $name): self

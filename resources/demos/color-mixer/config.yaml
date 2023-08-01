@@ -1,0 +1,5 @@
+name: Color Mixer
+sorting: 42
+data:
+    colorA: '#ff8700'
+    colorB: '#000000'

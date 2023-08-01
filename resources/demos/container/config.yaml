@@ -1,0 +1,10 @@
+name: Container
+sorting: 20
+data:
+    vcards:
+        -
+            name: Damian Gastelun
+            job: Web Designer
+            location: Kassel, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=7

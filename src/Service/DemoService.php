@@ -65,6 +65,7 @@ class DemoService
 
             $demo = new DemoDto();
             $demo->setIdentifier($identifier);
+            $demo->setSorting((int) ($config['sorting'] ?? 0));
             $demo->setName($config['name'] ?? $identifier);
             $demo->setContent($this->environment->render('demos/' . $identifier . '/index.html.twig', $data));
 
@@ -83,7 +84,10 @@ class DemoService
         }
 
         $criteria = Criteria::create()
-            ->orderBy(['identifier' => Criteria::ASC]);
+            ->orderBy([
+                'sorting' => Criteria::ASC,
+                'identifier' => Criteria::ASC
+            ]);
 
         return $demos->matching($criteria);
     }

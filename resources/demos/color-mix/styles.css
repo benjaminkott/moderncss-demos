@@ -1,0 +1,29 @@
+:root {
+    --mix-colorspace: srgb;
+    --text-color-1-value: yellow;
+    --text-color-1-percent: 50%;
+    --text-color-2-value: cyan;
+    --text-color-2-percent: 50%;
+}
+
+.blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+}
+
+.block-1 {
+    background: var(--text-color-1-value);
+}
+
+.block-2 {
+    background: var(--text-color-2-value);
+}
+
+.block-mix {
+    background: color-mix(
+        in var(--mix-colorspace),
+        var(--text-color-1-value) var(--text-color-1-percent),
+        var(--text-color-2-value) var(--text-color-2-percent)
+    );
+}
