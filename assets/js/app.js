@@ -33,7 +33,7 @@ document.querySelectorAll('[data-editor="true"]').forEach((element) => {
         folding: false,
         language: language,
         theme: 'vs-dark',
-        fontSize: 16,
+        fontSize: 24,
         lineNumbers: false,
         minimap: { enabled: false },
         scrollBeyondLastLine: false,
