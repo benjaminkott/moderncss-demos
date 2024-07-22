@@ -15,6 +15,6 @@ function handleInput(element) {
 const inputs = document.querySelectorAll('input');
 inputs.forEach((element) => {
     handleInput(element);
-    element.addEventListener('change', changeColor);
+    element.addEventListener('input', changeColor);
 });
 
