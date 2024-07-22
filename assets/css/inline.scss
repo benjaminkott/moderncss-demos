@@ -17,6 +17,7 @@ body {
     color: var(--demo-color);
     background: var(--demo-bg);
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    min-height: 100dvh;
 }
 
 .demo-contanier[style]:not([style="width: 100%;"]) {
@@ -24,6 +25,7 @@ body {
     outline-offset: 1px;
     outline-width: 1px;
     margin: 0 auto;
+    min-height: calc(100dvh - var(--demo-padding-y) * 2);
 }
 
 .demo-not-supported {
