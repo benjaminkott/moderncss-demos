@@ -1,18 +1,18 @@
 {
     "devDependencies": {
-        "@babel/core": "^7.24",
-        "@babel/preset-env": "^7.24",
-        "@popperjs/core": "^2.11",
-        "@symfony/webpack-encore": "^4.6",
-        "bootstrap": "^5.3",
-        "core-js": "^3.36",
-        "lit": "^2.8",
-        "lit-element": "^3.3",
-        "regenerator-runtime": "^0.13",
-        "sass": "^1.74",
-        "sass-loader": "^13.3",
-        "webpack": "^5.91",
-        "webpack-cli": "^5.1",
+        "@babel/core": "^7.24.9",
+        "@babel/preset-env": "^7.24.8",
+        "@popperjs/core": "^2.11.8",
+        "@symfony/webpack-encore": "^4.6.1",
+        "bootstrap": "^5.3.3",
+        "core-js": "^3.37.1",
+        "lit": "^3.1.4",
+        "lit-element": "^4.0.6",
+        "regenerator-runtime": "^0.14.1",
+        "sass": "^1.77.8",
+        "sass-loader": "^14.2.1",
+        "webpack": "^5.93.0",
+        "webpack-cli": "^5.1.4",
         "webpack-notifier": "^1.15"
     },
     "license": "UNLICENSED",
@@ -24,7 +24,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "monaco-editor": "^0.47",
+        "monaco-editor": "^0.50.0",
         "monaco-editor-webpack-plugin": "^7.1"
     }
 }
