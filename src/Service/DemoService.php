@@ -67,6 +67,7 @@ class DemoService
             $demo->setIdentifier($identifier);
             $demo->setSorting((int) ($config['sorting'] ?? 0));
             $demo->setName($config['name'] ?? $identifier);
+            $demo->setNew((bool) ($config['new'] ?? false));
             $demo->setContent($this->environment->render('demos/' . $identifier . '/index.html.twig', $data));
 
             if (file_exists($directory->getPathname() . '/styles.css')) {
@@ -86,7 +87,7 @@ class DemoService
         $criteria = Criteria::create()
             ->orderBy([
                 'sorting' => Criteria::ASC,
-                'identifier' => Criteria::ASC
+                'identifier' => Criteria::ASC,
             ]);
 
         return $demos->matching($criteria);

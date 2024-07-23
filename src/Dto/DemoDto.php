@@ -15,6 +15,7 @@ class DemoDto
     protected string $identifer;
     protected string $name;
     protected int $sorting = 0;
+    protected bool $new = false;
     protected string $content = '';
     protected string $styles = '';
     protected string $scripts = '';
@@ -101,5 +102,17 @@ class DemoDto
     public function getScripts(): string
     {
         return $this->scripts;
+    }
+
+    public function setNew(bool $new): self
+    {
+        $this->new = $new;
+
+        return $this;
+    }
+
+    public function getNew(): bool
+    {
+        return $this->new;
     }
 }

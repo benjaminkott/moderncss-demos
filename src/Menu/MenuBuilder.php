@@ -17,8 +17,9 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class MenuBuilder
 {
-    protected $factory;
-    protected $parameterBag;
+    protected FactoryInterface $factory;
+    protected ParameterBagInterface $parameterBag;
+    protected DemoService $demoService;
 
     public function __construct(
         FactoryInterface $factory,
