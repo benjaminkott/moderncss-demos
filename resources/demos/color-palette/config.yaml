@@ -2,16 +2,14 @@ name: Color Palette
 sorting: 43
 data:
     colors:
-        - '#0d6efd'
-        - '#6610f2'
-        - '#6f42c1'
-        - '#d63384'
-        - '#dc3545'
-        - '#fd7e14'
-        - '#ffc107'
-        - '#198754'
-        - '#20c997'
-        - '#0dcaf0'
+        - '#0055cc'
+        - '#5e4db2'
+        - '#abdced'
+        - '#247554'
+        - '#c6398f'
+        - '#ffcc33'
+        - '#ee6d11'
+        - '#d13a2e'
         - '#000000'
         - '#ffffff'
     percentages:
