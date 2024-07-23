@@ -20,12 +20,17 @@ body {
     min-height: 100dvh;
 }
 
+.demo-contanier {
+    width: 100%;
+    margin: 0 auto;
+    min-height: calc(100dvh - var(--demo-padding-y) * 2);
+    align-content: center;
+}
+
 .demo-contanier[style]:not([style="width: 100%;"]) {
     outline-style: dashed;
     outline-offset: 1px;
     outline-width: 1px;
-    margin: 0 auto;
-    min-height: calc(100dvh - var(--demo-padding-y) * 2);
 }
 
 .demo-not-supported {
