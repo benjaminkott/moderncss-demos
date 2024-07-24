@@ -2,70 +2,74 @@
 
 {% block body %}
 
-    <div id="demo-root" class="demo-container">
-        <div class="demo-preview">
-            <iframe id="demo-preview" src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
-        </div>
-        <div class="demo-editors">
-            <div class="demo-editors-inner">
+    <div id="demo-root" class="demo-root">
+        <div class="demo-loader">Loading ...</div>
+        <div class="demo-container">
+            <div class="demo-preview">
+                <iframe id="demo-preview" src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
+            </div>
+            <div class="demo-editors">
+                <div class="demo-editors-inner">
 
-                <div class="demo-editor-section active">
-                    <button
-                        class="demo-editor-section-label"
-                        data-section="css"
-                        >
-                        CSS
-                    </button>
-                    <div
-                        class="demo-editor-section-editor"
-                        data-editor="true"
-                        data-language="css"
-                        data-target="#demo-styles"
-                        >
-                        <textarea>{{ demo.styles }}</textarea>
+                    <div class="demo-editor-section active">
+                        <button
+                            class="demo-editor-section-label"
+                            data-section="css"
+                            >
+                            CSS
+                        </button>
+                        <div
+                            class="demo-editor-section-editor"
+                            data-editor="true"
+                            data-language="css"
+                            data-target="#demo-styles"
+                            >
+                            <textarea>{{ demo.styles }}</textarea>
+                        </div>
+                    </div>
+                    <div class="demo-editor-section">
+                        <button
+                            class="demo-editor-section-label"
+                            data-section="html"
+                            >
+                            HTML
+                        </button>
+                        <div
+                            class="demo-editor-section-editor"
+                            data-editor="true"
+                            data-language="html"
+                            data-target="#demo-inner"
+                            >
+                            <textarea>{{ demo.content }}</textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="demo-control">
+                <div class="demo-control-size">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" data-editor-modify-fontsize="-2" class="btn btn-primary">-a</button>
+                        <button type="button" data-editor-modify-fontsize="+2" class="btn btn-primary">+A</button>
                     </div>
                 </div>
-                <div class="demo-editor-section">
-                    <button
-                        class="demo-editor-section-label"
-                        data-section="html"
-                        >
-                        HTML
-                    </button>
-                    <div
-                        class="demo-editor-section-editor"
-                        data-editor="true"
-                        data-language="html"
-                        data-target="#demo-inner"
-                        >
-                        <textarea>{{ demo.content }}</textarea>
+                <div class="demo-control-split">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" data-preview-split-editor="0fr" data-preview-split-preview="1fr" class="btn btn-primary">Off</button>
+                        <button type="button" data-preview-split-editor="1fr" data-preview-split-preview="2fr" class="btn btn-primary active">1/2</button>
+                        <button type="button" data-preview-split-editor="1fr" data-preview-split-preview="1fr"  class="btn btn-primary">1/1</button>
+                        <button type="button" data-preview-split-editor="2fr" data-preview-split-preview="1fr"  class="btn btn-primary">2/1</button>
                     </div>
                 </div>
-
-            </div>
-        </div>
-        <div class="demo-control">
-            <div class="demo-control-size">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" data-editor-modify-fontsize="-2" class="btn btn-primary">-a</button>
-                    <button type="button" data-editor-modify-fontsize="+2" class="btn btn-primary">+A</button>
-                </div>
-            </div>
-            <div class="demo-control-split">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" data-preview-split-editor="1fr" data-preview-split-preview="2fr" class="btn btn-primary">1/2</button>
-                    <button type="button" data-preview-split-editor="1fr" data-preview-split-preview="1fr"  class="btn btn-primary active">1/1</button>
-                    <button type="button" data-preview-split-editor="2fr" data-preview-split-preview="1fr"  class="btn btn-primary">2/1</button>
-                </div>
-            </div>
-            <div class="demo-control-width">
-                <div class="d-flex">
-                    <label for="demo-preview-control" style="width: 150px">Frame</label>
-                    <input type="range" min="1" max="100" value="100" id="demo-preview-control" step="1">
-                </div>
-                <div class="d-flex">
-                    <label for="demo-preview-inner-control" style="width: 150px">Inner</label>
-                    <input type="range" min="1" max="100" value="100" id="demo-preview-inner-control" step="1">
+                <div class="demo-control-width">
+                    <div class="d-flex">
+                        <label for="demo-preview-control" style="width: 150px">Frame</label>
+                        <input type="range" min="1" max="100" value="100" id="demo-preview-control" step="1">
+                    </div>
+                    <div class="d-flex">
+                        <label for="demo-preview-inner-control" style="width: 150px">Inner</label>
+                        <input type="range" min="1" max="100" value="100" id="demo-preview-inner-control" step="1">
+                    </div>
                 </div>
             </div>
         </div>

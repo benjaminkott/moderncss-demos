@@ -1,6 +1,27 @@
-.demo-container {
+.demo-root {
+    container-type: inline-size;
+    height: 100%;
+    width: 100%;
     --columns-editor: 1fr;
-    --columns-preview: 1fr;
+    --columns-preview: 2fr;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.demo-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    color: inherit;
+    background-color: inherit;
+    align-content: center;
+    text-align: center;
+}
+
+.demo-container {
     padding: 1rem;
     display: grid;
     position: relative;
@@ -11,10 +32,21 @@
         'editors control';
     height: 100%;
     width: 100%;
-    background-color: #1e1e1e;
-    color: #ffffff;
     gap: 1rem;
 }
+
+@container style(--columns-editor: 0fr) {
+    .demo-container {
+        grid-template-columns: var(--columns-preview);
+        grid-template-areas:
+            'preview'
+            'control';
+    }
+    .demo-editors {
+        display: none;
+    }
+}
+
 .demo-preview {
     grid-area: preview;
     display: flex;
