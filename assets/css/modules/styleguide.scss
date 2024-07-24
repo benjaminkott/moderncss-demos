@@ -1,3 +1,8 @@
+:root {
+    --navigation-padding: 30px;
+    --navigation-width: 260px;
+}
+
 .styleguide-body {
     margin: 0;
     font-size: 1rem;
@@ -15,26 +20,31 @@
 // Page
 .styleguide-page {
     display: flex;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     &-navigation {
         z-index: 1;
         position: absolute;
         top: 0;
-        left: -220px;
-        &:hover {
-            left: 0;
-        }
+        left: calc(var(--navigation-width) * -1);
         bottom: 0;
-        width: 240px;
+        width: var(--navigation-width);
         flex-grow: 0;
         flex-shrink: 0;
         background-color: #333333;
-        padding: 1.75rem;
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, .15);
+        height: 100%;
+        &:focus,
+        &:focus-within,
+        &:hover {
+            left: 0;
+
+            .styleguide-navigation-toggle {
+                display: none;
+            }
+        }
     }
     &-content {
-        margin-left: 20px;
         flex-grow: 1;
         display: flex;
     }
@@ -58,11 +68,51 @@
 }
 
 // Navigation
-.styleguide-navigation {
+.styleguide-navigation-toggle {
+    left: 100%;
+    top: 50%;
+    translate: 0 -50%;
+    position: absolute;
+    display: block;
+    height: 60px;
+    width: 30px;
+    border-radius: 0 0.5rem 0.5rem 0;
+    border: 1px solid #414141;
+    background-color: #333333;
+    border-left: none;
+    box-shadow: inset 2px 0px 2px 0px rgba(0, 0, 0, 0.25),
+                      0px 0px 5px 2px rgba(0, 0, 0, 0.15);
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        translate: -50% -50%;
+        display: block;
+        height: 60%;
+        width: 2px;
+        background: #666;
+    }
+
+    &:before {
+        left: 11px;
+    }
+
+    &:after {
+        right: 11px;
+    }
+}
+
+.styleguide-navigation-list {
+    height: 100%;
+    padding: var(--navigation-padding);
+    overflow-y: auto;
     font-size: 12px;
     color: #ffffff;
     ul {
         padding: 0;
+        margin: 0;
         list-style: none;
     }
     li {

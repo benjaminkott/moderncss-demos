@@ -27,7 +27,7 @@
 }
 
 .relative-color-token-item {
-    height: 30px;
+    height: clamp(15px, 3.5vh, 30px);
     flex-grow: 1;
 }
 

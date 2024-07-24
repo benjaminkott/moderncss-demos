@@ -7,6 +7,11 @@ previewControl?.addEventListener('input', (event) => {
     preview.style.width = event.target.value + '%';
 });
 
+const previewZoomControl = document.getElementById('demo-preview-zoom-control');
+previewZoomControl?.addEventListener('input', (event) => {
+    preview.contentDocument.querySelector('html').style.zoom = event.target.value + '%';
+});
+
 const previewInnerControl = document.getElementById('demo-preview-inner-control');
 previewInnerControl?.addEventListener('input', (event) => {
     preview.contentDocument.querySelector('#demo-inner').style.width = event.target.value + '%';

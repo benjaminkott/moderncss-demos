@@ -11,19 +11,24 @@
     --demo-color: #313131;
 }
 
+
+html,
+body {
+    min-height: 100vh;
+}
+
 body {
     margin: 0;
     padding: var(--demo-padding-y) var(--demo-padding-x);
     color: var(--demo-color);
     background: var(--demo-bg);
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    min-height: 100dvh;
 }
 
 .demo-contanier {
     width: 100%;
     margin: 0 auto;
-    min-height: calc(100dvh - var(--demo-padding-y) * 2);
+    min-height: calc(100vh - var(--demo-padding-y) * 2);
     align-content: center;
 }
 

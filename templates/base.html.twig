@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% if block("title") is defined %}{{ block('title') }} - {% endif %}Modern CSS Demos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     {{ encore_entry_link_tags('app') }}
     {% block stylesheets %}{% endblock %}
             {{ encore_entry_link_tags('app') }}
@@ -10,8 +11,9 @@
 <body class="styleguide-body">
 
     <div class="styleguide-page">
-        <div class="styleguide-page-navigation">
-            <nav class="styleguide-navigation">
+        <div class="styleguide-page-navigation" tabindex="0">
+            <button type="button" class="styleguide-navigation-toggle"></button>
+            <nav class="styleguide-navigation-list">
                 {{ knp_menu_render('main') }}
             </nav>
         </div>
