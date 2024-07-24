@@ -5,16 +5,20 @@
 }
 
 :root {
+    --zoom: 100;
+    --zoom-applied: calc(var(--zoom) * 0.01);
+    --zoom-diff: calc(((1 / var(--zoom-applied)) - 1) * 100dvh);
     --demo-padding-x: 1.5rem;
     --demo-padding-y: 1.5rem;
     --demo-bg: #dadada;
     --demo-color: #313131;
+    --demo-min-height: calc(100dvh + var(--zoom-diff));
+    zoom: var(--zoom-applied);
 }
-
 
 html,
 body {
-    min-height: 100vh;
+    min-height: var(--demo-min-height);
 }
 
 body {
@@ -28,7 +32,7 @@ body {
 .demo-contanier {
     width: 100%;
     margin: 0 auto;
-    min-height: calc(100vh - var(--demo-padding-y) * 2);
+    min-height: calc(var(--demo-min-height) - var(--demo-padding-y) * 2);
     align-content: center;
 }
 

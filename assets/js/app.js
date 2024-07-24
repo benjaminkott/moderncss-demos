@@ -9,7 +9,7 @@ previewControl?.addEventListener('input', (event) => {
 
 const previewZoomControl = document.getElementById('demo-preview-zoom-control');
 previewZoomControl?.addEventListener('input', (event) => {
-    preview.contentDocument.querySelector('html').style.zoom = event.target.value + '%';
+    preview.contentDocument.querySelector('html').style.setProperty('--zoom', event.target.value);
 });
 
 const previewInnerControl = document.getElementById('demo-preview-inner-control');
@@ -81,7 +81,7 @@ document.querySelectorAll('[data-editor="true"]').forEach((element) => {
         folding: false,
         language: language,
         theme: 'vs-dark',
-        fontSize: 24,
+        fontSize: 16,
         lineNumbers: false,
         minimap: { enabled: false },
         scrollBeyondLastLine: false,
