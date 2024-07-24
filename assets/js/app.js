@@ -7,11 +7,24 @@ previewControl?.addEventListener('input', (event) => {
     preview.style.width = event.target.value + '%';
 });
 
+// Zoom
+function applyZoom(zoom) {
+    preview.contentDocument.querySelector('html').style.setProperty('--zoom', zoom);
+    localStorage.setItem('previewZoom', zoom);
+    const previewZoomControl = document.getElementById('demo-preview-zoom-control');
+    if (previewZoomControl.value !== zoom) {
+        previewZoomControl.value = zoom;
+    }
+}
+
+applyZoom(localStorage.getItem("previewZoom") ?? 100);
+
 const previewZoomControl = document.getElementById('demo-preview-zoom-control');
 previewZoomControl?.addEventListener('input', (event) => {
-    preview.contentDocument.querySelector('html').style.setProperty('--zoom', event.target.value);
+    applyZoom(event.target.value);
 });
 
+// Inner
 const previewInnerControl = document.getElementById('demo-preview-inner-control');
 previewInnerControl?.addEventListener('input', (event) => {
     preview.contentDocument.querySelector('#demo-inner').style.width = event.target.value + '%';
