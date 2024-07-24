@@ -1,0 +1,62 @@
+.relative-color {
+    display: grid;
+    gap: 1rem;
+}
+
+.relative-color-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.relative-color-list-item {
+    display: grid;
+    gap: .5rem;
+    border-radius: .5rem;
+}
+
+.relative-color-list-item-label {
+    text-align: center;
+}
+
+.relative-color-token {
+    --lightness: 100%;
+    --basecolor: #0055cc;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.relative-color-token-item {
+    height: 30px;
+    flex-grow: 1;
+}
+
+.relative-color-token-item--hsl {
+    background: hsl(from var(--basecolor) h s var(--lightness));
+}
+
+.relative-color-token-item--lch {
+    background: lch(from var(--basecolor) var(--lightness) c h);
+}
+
+.relative-color-token-item--oklch {
+    background: oklch(from var(--basecolor) var(--lightness) c h);
+}
+
+.relative-color-token-item--lab {
+    background: lab(from var(--basecolor) var(--lightness) a b);
+}
+
+.relative-color-token-item--oklab {
+    background: oklab(from var(--basecolor) var(--lightness) a b);
+}
+
+
+.relative-color-picker {
+    display: grid;
+    gap: 1rem;
+}
+
+.relative-color-picker input[type="range"] {
+    width: 100%;
+}

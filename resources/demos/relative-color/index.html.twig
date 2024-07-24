@@ -1,0 +1,25 @@
+<div class="relative-color">
+    <div class="relative-color-list">
+        {% for space in data.spaces %}
+            <div class="relative-color-list-item">
+                <div class="relative-color-list-item-label">{{ space }}</div>
+                <div class="relative-color-token">
+                    {% for percent in data.percentages|reverse %}
+                    <div class="relative-color-token-item relative-color-token-item--{{ space }}" style="--lightness: {{ percent }};"></div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="relative-color-picker">
+        <div class="relativ-color-picker-row">
+            <label for="relative-color-picker-basecolor">Color</label>
+            <input
+                id="relative-color-picker-basecolor"
+                type="color"
+                value="#0055cc"
+                data-variable="--basecolor"
+            >
+        </div>
+    </div>
+</div>
