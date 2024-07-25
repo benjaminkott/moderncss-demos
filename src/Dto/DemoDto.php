@@ -48,7 +48,7 @@ class DemoDto
             STR_PAD_LEFT
         );
 
-        return $number . ' ' . $this->getName();
+        return $number . ' - ' . $this->getName();
     }
 
     public function getSorting(): int

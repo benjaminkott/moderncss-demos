@@ -48,10 +48,22 @@
 }
 
 .demo-preview {
+    position: relative;
     grid-area: preview;
     display: flex;
     justify-content: center;
     align-items: center;
+    &[data-label]:after {
+        background-color: #414141;
+        padding: .3rem .75rem;
+        content: attr(data-label);
+        border-radius: 10px 0 10px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 10px;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .15);
+    }
     iframe {
         display: block;
         height: 100%;

@@ -5,7 +5,7 @@
     <div id="demo-root" class="demo-root">
         <div class="demo-loader">Loading ...</div>
         <div class="demo-container">
-            <div class="demo-preview">
+            <div class="demo-preview" data-label="{{ demo.label }}">
                 <iframe id="demo-preview" src="{{ path('app_demo_inline', { 'identifier': demo.identifier }) }}"></iframe>
             </div>
             <div class="demo-editors">
