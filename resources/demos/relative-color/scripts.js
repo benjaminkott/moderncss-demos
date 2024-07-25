@@ -16,4 +16,3 @@ inputs.forEach((element) => {
     handleInput(element);
     element.addEventListener('input', changeColor);
 });
-

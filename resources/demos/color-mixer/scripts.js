@@ -18,3 +18,9 @@ inputs.forEach((element) => {
     element.addEventListener('input', changeColor);
 });
 
+const colorspacePicker = document.getElementById('colorspace');
+colorspacePicker.addEventListener('change', (event) => {
+    const value = event.target.value;
+    const variable = event.target.dataset.variable;
+    document.getElementById('colormixer').style.setProperty(variable, value);
+});

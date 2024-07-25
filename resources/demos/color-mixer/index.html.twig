@@ -29,6 +29,16 @@
     </div>
     <div class="colorcontrol">
         <div>
+            <select
+                id="colorspace"
+                data-variable="--color-space"
+            >
+                {% for space in data.spaces %}
+                <option value="{{ space }}">{{ space }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
             <input
                 id="colorpicker-a-value"
                 class="colorpicker"

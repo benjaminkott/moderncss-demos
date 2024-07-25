@@ -1,10 +1,11 @@
 .colormixer {
+    --color-space: srgb;
     --color-a-value: transparent;
     --color-a-percent: 100%;
     --color-b-value: transparent;
     --color-b-percent: 100%;
     --color-result: color-mix(
-        in srgb,
+        in var(--color-space),
         var(--color-a-value) var(--color-a-percent),
         var(--color-b-value) var(--color-b-percent)
     );

@@ -3,3 +3,10 @@ sorting: 42
 data:
     colorA: '#ff8700'
     colorB: '#000000'
+    spaces:
+        - srgb
+        - hsl
+        - lch
+        - oklch
+        - lab
+        - oklab

@@ -8,11 +8,11 @@
     padding: 2rem;
 }
 
-/* .bigtext {
+.bigtext {
     background: #ff8700;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} */
+}
 
 /* .bigtext {
     background-image: linear-gradient(
@@ -26,7 +26,7 @@
     background-image: url('/assets/images/decoration/big-city-rainbow.jpeg');
 } */
 
-/* .bigtext {
+.bigtext {
     background-image:
         linear-gradient(
             45deg,
@@ -34,12 +34,12 @@
             color-mix(in srgb, #03f4e8, transparent)
         ),
         url('/assets/images/decoration/big-city-rainbow.jpeg');
-} */
+}
 
-/* .bigtext {
+.bigtext {
     background-size: 150%;
     animation: swizzle 30s ease-in-out infinite;
-} */
+}
 
 @keyframes swizzle {
     0% {
