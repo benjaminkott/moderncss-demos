@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', function () {
         const previewControl = document.getElementById('demo-preview-control');
         if (previewControl) {
             previewControl.addEventListener('input', (event) => {
-                const preview = document.getElementById('demo-preview');
+                const preview = document.getElementById('demo-preview-inner');
                 preview.style.width = event.target.value + '%';
             });
         }
@@ -18,11 +18,10 @@ window.addEventListener('DOMContentLoaded', function () {
         // zoom
         function applyZoom(zoom) {
             const previewZoomControl = document.getElementById('demo-preview-zoom-control');
-            const preview = document.getElementById('demo-preview');
-            if (previewZoomControl === null || preview === null) {
-                return;
-            }
-            preview.contentDocument.querySelector('html').style.setProperty('--zoom', zoom);
+            const preview = document.getElementById('demo-iframe');
+            preview.style.setProperty('scale', zoom * 0.01);
+            preview.style.setProperty('height', 100 * (100 / zoom) + '%');
+            preview.style.setProperty('width', 100 * (100 / zoom)  + '%');
             if (previewZoomControl.value !== zoom) {
                 previewZoomControl.value = zoom;
             }
@@ -41,8 +40,8 @@ window.addEventListener('DOMContentLoaded', function () {
         const previewInnerControl = document.getElementById('demo-preview-inner-control');
         if (previewInnerControl) {
             previewInnerControl.addEventListener('input', (event) => {
-                const preview = document.getElementById('demo-preview');
-                preview.contentDocument.querySelector('#demo-inner').style.width = event.target.value + '%';
+                const iframe = document.getElementById('demo-iframe');
+                iframe.contentDocument.querySelector('#demo-inner').style.width = event.target.value + '%';
             });
         }
     }
