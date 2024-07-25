@@ -1,0 +1,24 @@
+<div id="context" class="context">
+    <div id="card">
+        {% include 'shared/_vcard.html.twig' with { 'vcard': data.vcards.0 } only %}
+    </div>
+</div>
+
+<div class="form">
+    <div class="form-section">
+        <label for="colorSchemeContext">context color-scheme:</label>
+        <select id="colorSchemeContext" data-target="#context">
+            {% for colorScheme in data.colorSchemes %}
+                <option value="{{ colorScheme }}">{{ colorScheme }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="form-section">
+        <label for="colorSchemeCard">card color-scheme:</label>
+        <select id="colorSchemeCard" data-target="#card">
+            {% for colorScheme in data.colorSchemes %}
+                <option value="{{ colorScheme }}">{{ colorScheme }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>

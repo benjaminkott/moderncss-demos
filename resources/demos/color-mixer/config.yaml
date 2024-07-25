@@ -1,5 +1,5 @@
 name: Color Mixer
-sorting: 42
+sorting: 43
 data:
     colorA: '#ff8700'
     colorB: '#000000'
