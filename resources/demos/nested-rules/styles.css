@@ -1,0 +1,60 @@
+/**
+ * Important Note
+ *
+ * Nesting on iOS16 only works when the rule is starting with a symbol.
+ * Read: https://webkit.org/blog/14154/webkit-features-in-safari-16-5/
+ */
+:root {
+    --article-border-radius: 5px;
+    --article-spacing: 1.5rem;
+    --article-color: #313131;
+    --article-bg: #fff;
+    --article-shadow: 0 0 2px 1px rgb(0 0 0 / 25%);
+}
+
+.article-grid {
+    display: grid;
+    margin: 0 auto;
+    gap: var(--article-spacing);
+    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.article {
+    color: var(--article-color);
+    border-radius: var(--article-border-radius);
+    background: var(--article-bg);
+    box-shadow: var(--article-shadow);
+    overflow: hidden;
+
+    & img {
+        display: block;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        max-width: 100%;
+        height: auto;
+    }
+
+    & .article-body {
+        padding: var(--article-spacing);
+    }
+
+    & h2 {
+        line-height: 1.25;
+        margin: 0;
+        margin-bottom: .5em;
+    }
+
+    & p {
+        margin: 0;
+    }
+
+    &:has(.article-image) {
+        font-size: .75rem;
+    }
+
+    &:not(:has(.article-image)) {
+        --article-color: #fff;
+        --article-bg: #9c27b0;
+    }
+}

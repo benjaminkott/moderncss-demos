@@ -1,0 +1,13 @@
+name: Nested Rules
+sorting: 004
+new: true
+mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting
+data:
+    articles:
+        -
+            title: Praesent faucibus sollicitudin porttitor
+            abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://picsum.photos/id/33/640/480
+        -
+            title: Integer convallis tortor ac enim
+            abstract: Mauris ante lorem, sagittis eu purus id, finibus tempor quam. Suspendisse eu viverra neque. Vivamus aliquet lorem lorem, a vestibulum justo venenatis at. Nunc turpis nisi, tempus elementum tellus sit amet, viverra finibus nisi.
