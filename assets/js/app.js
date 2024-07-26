@@ -116,7 +116,8 @@ window.addEventListener('DOMContentLoaded', function () {
             scrollBeyondLastLine: false,
         })
         editor.onDidChangeModelContent((event) => {
-            preview.contentDocument.querySelector(target).innerHTML = editor.getValue();
+            const iframe = document.getElementById('demo-iframe');
+            iframe.contentDocument.querySelector(target).innerHTML = editor.getValue();
         });
         window.previeweditors.push(editor);
     });
