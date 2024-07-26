@@ -1,0 +1,31 @@
+
+<div class="container">
+    <button id="popover-toggle" popovertarget="popover" class="btn">
+        Open
+    </button>
+</div>
+
+<div class="popover" id="popover" popover anchor="popover-toggle">
+    <button class="popover-close" popovertarget="popover" popovertargetaction="hide">
+        <span aria-hidden="true">❌</span>
+        <span class="sr-only">Close</span>
+    </button>
+    <div class="popover-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque tempus pulvinar. Vivamus tellus lacus, posuere quis justo eget, suscipit ultrices neque. Suspendisse potenti. Vestibulum ut sem non mauris semper lobortis. Donec quis quam lorem. Donec mattis consequat massa sed rhoncus. Duis vel tempor odio. Mauris sit amet est at felis viverra laoreet vitae ac enim. Donec accumsan purus nec tortor cursus congue.</p>
+    </div>
+</div>
+
+<div class="form">
+    <div class="form-section">
+        <label for="popoverMode">popover:</label>
+        <select
+            id="popoverMode"
+            data-trigger="change"
+            data-target="#popover"
+            data-attribute="popover"
+        >
+                <option value="auto">auto</option>
+                <option value="manual">manual</option>
+        </select>
+    </div>
+</div>
