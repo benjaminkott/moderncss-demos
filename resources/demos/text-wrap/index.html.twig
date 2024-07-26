@@ -17,9 +17,17 @@
 </div>
 
 <div class="form">
-    <select id="textwrap">
-        <option value="wrap">wrap</option>
-        <option value="balance">balance</option>
-        <option value="pretty">pretty</option>
-    </select>
+    <div class="form-section">
+        <label for="textwrap">text-wrap:</label>
+        <select
+            id="textwrap"
+            data-trigger="change"
+            data-target="#target"
+            data-property="text-wrap"
+        >
+            <option value="wrap">wrap</option>
+            <option value="balance">balance</option>
+            <option value="pretty">pretty</option>
+        </select>
+    </div>
 </div>

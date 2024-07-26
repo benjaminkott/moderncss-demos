@@ -32,9 +32,10 @@ body {
 }
 
 .demo-contanier[style]:not([style="width: 100%;"]) {
-    outline-style: dashed;
     outline-offset: 1px;
-    outline-width: 1px;
+    outline-style: dashed;
+    outline-width: 2px;
+    border-radius: 2px;
 }
 
 .demo-not-supported {
@@ -46,6 +47,25 @@ body {
     margin: 0 auto;
     margin-bottom: 1.5rem;
     max-width: 900px;
+}
+
+.form {
+    display: flex;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: .5rem 2rem;
+    justify-content: center;
+}
+
+.form-section {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.form select {
+    display: inline-block;
+    padding: .25rem .5rem;
 }
 
 @media (prefers-color-scheme: dark) {

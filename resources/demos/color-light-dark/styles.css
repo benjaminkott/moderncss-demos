@@ -125,21 +125,3 @@
         border-radius: 0;
     }
 }
-
-.form {
-    display: flex;
-    padding: 1rem;
-    flex-wrap: wrap;
-    gap: .5rem 2rem;
-    justify-content: center;
-}
-
-.form-section {
-    display: flex;
-    gap: .5rem;
-}
-
-.form select {
-    display: inline-block;
-    padding: .25rem .5rem;
-}

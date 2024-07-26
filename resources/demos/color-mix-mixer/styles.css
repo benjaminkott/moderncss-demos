@@ -74,14 +74,4 @@
 
 .colorcontrol {
     grid-area: colorcontrol;
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-}
-
-.colorcontrol div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .25rem;
 }

@@ -12,14 +12,18 @@
         {% endfor %}
     </div>
     <div class="relative-color-picker">
-        <div class="relativ-color-picker-row">
-            <label for="relative-color-picker-basecolor">Color</label>
-            <input
-                id="relative-color-picker-basecolor"
-                type="color"
-                value="#0055cc"
-                data-variable="--basecolor"
-            >
+        <div class="form">
+            <div class="form-section">
+                <label for="relative-color-picker-basecolor">Color:</label>
+                <input
+                    id="relative-color-picker-basecolor"
+                    type="color"
+                    value="#0055cc"
+                    data-trigger="input"
+                    data-target=".relative-color-token"
+                    data-property="--basecolor"
+                >
+            </div>
         </div>
     </div>
 </div>

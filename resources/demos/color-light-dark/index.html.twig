@@ -7,7 +7,11 @@
 <div class="form">
     <div class="form-section">
         <label for="colorSchemeContext">context color-scheme:</label>
-        <select id="colorSchemeContext" data-target="#context">
+        <select id="colorSchemeContext"
+            data-trigger="change"
+            data-target="#context"
+            data-property="color-scheme"
+            >
             {% for colorScheme in data.colorSchemes %}
                 <option value="{{ colorScheme }}">{{ colorScheme }}</option>
             {% endfor %}
@@ -15,7 +19,11 @@
     </div>
     <div class="form-section">
         <label for="colorSchemeCard">card color-scheme:</label>
-        <select id="colorSchemeCard" data-target="#card">
+        <select id="colorSchemeCard"
+            data-trigger="change"
+            data-target="#card"
+            data-property="color-scheme"
+            >
             {% for colorScheme in data.colorSchemes %}
                 <option value="{{ colorScheme }}">{{ colorScheme }}</option>
             {% endfor %}

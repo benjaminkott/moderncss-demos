@@ -28,54 +28,73 @@
         </div>
     </div>
     <div class="colorcontrol">
-        <div>
-            <select
-                id="colorspace"
-                data-variable="--color-space"
-            >
-                {% for space in data.spaces %}
-                <option value="{{ space }}">{{ space }}</option>
-                {% endfor %}
-            </select>
-        </div>
-        <div>
-            <input
-                id="colorpicker-a-value"
-                class="colorpicker"
-                type="color"
-                name="colorpicker-a"
-                value="{{ data.colorA }}"
-                data-variable="--color-a-value"
-            >
-            <input
-                id="colorpicker-a-percent"
-                type="range"
-                min="1"
-                max="100"
-                step="1"
-                value="100"
-                data-variable="--color-a-percent"
-            >
-        </div>
-        <div>
-            <input
-                id="colorpicker-b-value"
-                class="colorpicker"
-                type="color"
-                name="colorpicker-b"
-                value="{{ data.colorB }}"
-                data-variable="--color-b-value"
-            >
-            <input
-                id="colorpicker-b-percent"
-                type="range"
-                min="1"
-                max="100"
-                step="1"
-                value="100"
-                data-variable="--color-b-percent"
-            >
+        <div class="form">
+            <div class="form-section">
+                <label for="colorSchemeContext">Color Space:</label>
+                <select id="colorSchemeContext"
+                    data-trigger="change"
+                    data-target="#colormixer"
+                    data-property="--color-space"
+                    >
+                    {% for space in data.spaces %}
+                    <option value="{{ space }}">{{ space }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-section">
+                <label for="colorpicker-a-value">Color A:</label>
+                <input
+                    id="colorpicker-a-value"
+                    class="colorpicker"
+                    type="color"
+                    name="colorpicker-a"
+                    value="{{ data.colorA }}"
+                    data-trigger="input"
+                    data-target="#colormixer"
+                    data-property="--color-a-value"
+                    data-value-elements="[data-colorpicker-value='--color-a-value']"
+                >
+                <input
+                    id="colorpicker-a-percent"
+                    type="range"
+                    min="1"
+                    max="100"
+                    step="1"
+                    value="100"
+                    data-trigger="input"
+                    data-target="#colormixer"
+                    data-property="--color-a-percent"
+                    data-value-affix="%"
+                    data-value-elements="[data-colorpicker-value='--color-a-percent']"
+                >
+            </div>
+            <div class="form-section">
+                <label for="colorpicker-b-value">Color B:</label>
+                <input
+                    id="colorpicker-b-value"
+                    class="colorpicker"
+                    type="color"
+                    name="colorpicker-b"
+                    value="{{ data.colorB }}"
+                    data-trigger="input"
+                    data-target="#colormixer"
+                    data-property="--color-b-value"
+                    data-value-elements="[data-colorpicker-value='--color-b-value']"
+                >
+                <input
+                    id="colorpicker-b-percent"
+                    type="range"
+                    min="1"
+                    max="100"
+                    step="1"
+                    value="100"
+                    data-trigger="input"
+                    data-target="#colormixer"
+                    data-property="--color-b-percent"
+                    data-value-affix="%"
+                    data-value-elements="[data-colorpicker-value='--color-b-percent']"
+                >
+            </div>
         </div>
     </div>
 </div>
-

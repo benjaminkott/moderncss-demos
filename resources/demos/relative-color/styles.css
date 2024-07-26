@@ -50,13 +50,3 @@
 .relative-color-token-item--oklab {
     background: oklab(from var(--basecolor) var(--lightness) a b);
 }
-
-
-.relative-color-picker {
-    display: grid;
-    gap: 1rem;
-}
-
-.relative-color-picker input[type="range"] {
-    width: 100%;
-}
