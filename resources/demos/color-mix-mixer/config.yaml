@@ -1,5 +1,6 @@
-name: Color Mixer
+name: Color Mix Mixer
 sorting: 43
+mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
 data:
     colorA: '#ff8700'
     colorB: '#000000'

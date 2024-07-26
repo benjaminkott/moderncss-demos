@@ -67,6 +67,7 @@ class DemoService
             $demo->setIdentifier($identifier);
             $demo->setSorting((int) ($config['sorting'] ?? 0));
             $demo->setName($config['name'] ?? $identifier);
+            $demo->setMdn($config['mdn'] ?? '');
             $demo->setNew((bool) ($config['new'] ?? false));
             $demo->setContent($this->environment->render('demos/' . $identifier . '/index.html.twig', $data));
 

@@ -1,5 +1,6 @@
 name: Container
 sorting: 20
+mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries
 data:
     vcards:
         -

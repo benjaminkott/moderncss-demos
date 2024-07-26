@@ -15,9 +15,8 @@
                                 {{ demo.name }}
                             </a>
                         </div>
-                        <div class="card-subtitle text-body-secondary">
-                            {{ demo.sorting }}-{{ demo.identifier }}
-                        </div>
+                        <a href="{{ path('app_demo_show', { 'identifier': demo.identifier }) }}" class="card-link link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover">Demo</a>
+                        {% if demo.mdn %}<a class="card-link link-secondary link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="{{ demo.mdn}}">MDN</a>{% endif %}
                     </div>
                 </div>
             </div>

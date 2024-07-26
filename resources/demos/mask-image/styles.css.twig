@@ -29,6 +29,6 @@
 
 {% for icon, url in data.icons %}
 .icon-{{ icon|raw }} {
-    -webkit-mask-image: {{ url|raw }};
+    mask-image: {{ url|raw }};
 }
 {% endfor %}

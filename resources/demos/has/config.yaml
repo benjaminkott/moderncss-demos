@@ -1,5 +1,6 @@
 name: Has
 sorting: 70
+mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/:has
 data:
     articles:
         -

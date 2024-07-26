@@ -16,6 +16,7 @@ class DemoDto
     protected string $name;
     protected int $sorting = 0;
     protected bool $new = false;
+    protected string $mdn = '';
     protected string $content = '';
     protected string $styles = '';
     protected string $scripts = '';
@@ -66,6 +67,30 @@ class DemoDto
     public function getName(): string
     {
         return $this->name;
+    }
+
+    public function setCaniuse(string $caniuse): self
+    {
+        $this->caniuse = $caniuse;
+
+        return $this;
+    }
+
+    public function getCaniuse(): string
+    {
+        return $this->caniuse;
+    }
+
+    public function setMdn(string $mdn): self
+    {
+        $this->mdn = $mdn;
+
+        return $this;
+    }
+
+    public function getMdn(): string
+    {
+        return $this->mdn;
     }
 
     public function setContent(string $content): self
