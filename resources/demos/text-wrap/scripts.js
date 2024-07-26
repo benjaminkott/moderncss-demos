@@ -1,6 +1,9 @@
-if (!CSS.supports('text-wrap', 'balance', 'pretty')) {
-    const notice = document.createElement('div');
-    notice.classList.add('demo-not-supported');
-    notice.innerHTML = 'The browser does not support <strong>text-wrap: balance</strong>.';
-    document.querySelector('#demo-inner').prepend(notice);
-}
+document.addEventListener('DOMContentLoaded', function() {
+    if (!CSS.supports('text-wrap', 'balance')) {
+        window.demotools.notsupported('This browser does not support <strong>text-wrap: balance</strong>.');
+    }
+    if (!CSS.supports('text-wrap', 'pretty')) {
+        window.demotools.notsupported('This browser does not support <strong>text-wrap: pretty</strong>.');
+    }
+});
+

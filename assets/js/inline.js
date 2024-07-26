@@ -39,3 +39,12 @@ inputs.forEach((element) => {
         handleTriggerInput(event.target)
     });
 });
+
+window.demotools = {
+    notsupported: (message) => {
+        const notice = document.createElement('div');
+        notice.classList.add('demo-not-supported');
+        notice.innerHTML = message;
+        document.querySelector('#demo-inner').prepend(notice);
+    }
+}
