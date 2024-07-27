@@ -7,7 +7,7 @@
 
 .modal {
     position: fixed;
-    top: 50%;
+    top: 100%;
     left: 50%;
     display: none;
     translate: -50% -50%;
@@ -15,17 +15,12 @@
     border-radius: var(--modal-border-radius);
     transition-property: opacity, display, top, scale;
     transition-duration: 0.5s;
+    transition-behavior: allow-discrete;
     color: var(--modal-color);
     background: var(--modal-bg);
-    opacity: 1;
+    opacity: 0;
     width: clamp(12rem, 80vw, 38rem);
-    scale: 1;
-
-    @starting-style {
-        top: 100%;
-        opacity: 0;
-        scale: 0.25;
-    }
+    scale: 0.25;
 
     & > *:first-child {
         margin-top: 0;
@@ -33,6 +28,15 @@
 
     &.show {
         display: block;
+        top: 50%;
+        scale: 1;
+        opacity: 1;
+
+        @starting-style {
+            top: 100%;
+            opacity: 0;
+            scale: 0.25;
+        }
     }
 }
 
