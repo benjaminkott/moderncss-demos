@@ -12,7 +12,7 @@
                                 <span class="badge bg-danger float-end">NEW</span>
                             {% endif %}
                             <a href="{{ path('app_demo_show', { 'identifier': demo.identifier }) }}" class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover fw-bold">
-                                {{ demo.name }}
+                                {{demo.label}}
                             </a>
                         </div>
                         <a href="{{ path('app_demo_show', { 'identifier': demo.identifier }) }}" class="card-link link-primary link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover">Demo</a>
