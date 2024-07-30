@@ -1,0 +1,11 @@
+<div class="reading-indicator">
+    <div class="reading-indicator-progress"></div>
+</div>
+
+<div class="container">
+    <div class="vcard-grid">
+        {% for vcard in data.vcards %}
+        {% include 'shared/_vcard.html.twig' with { 'vcard': vcard } only %}
+        {% endfor %}
+    </div>
+</div>

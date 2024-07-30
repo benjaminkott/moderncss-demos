@@ -1,0 +1,53 @@
+name: scroll-driven animations
+sorting: 110
+new: true
+data:
+    vcards:
+        -
+            name: Damian Gastelun
+            job: Web Designer
+            location: Kassel, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=7
+        -
+            name: Madelynn Burkhart
+            job: Frontend Developer
+            location: Essen, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=5
+        -
+            name: Amber Dowtin
+            job: Full Stack Developer
+            location: Herne, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=9
+        -
+            name: Arian Riesinger
+            job: UI Designer
+            location: Dresden, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=11
+        -
+            name: Karsyn Niedecken
+            job: UX Designer
+            location: Erlangen, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=14
+        -
+            name: Roger Sodawasser
+            job: Content Strategist
+            location: Düsseldorf, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=52
+        -
+            name: Gael Mieszala
+            job: Web Developer
+            location: Oldenburg, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=8
+        -
+            name: Evie Rhines
+            job: Art Director
+            location: Frankfurt am Main, Germany
+            bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sodales molestie eros, vitae hendrerit massa aliquet ut. Vivamus felis magna, accumsan vel lorem ac, porta facilisis ligula. Vivamus in tincidunt metus. Suspendisse eu molestie quam. Mauris fringilla metus vitae nibh tempus ultricies. Suspendisse lacinia diam eu mi consequat condimentum.
+            image: https://i.pravatar.cc/400?img=1
