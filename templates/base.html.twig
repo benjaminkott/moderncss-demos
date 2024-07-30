@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>{% if block("title") is defined %}{{ block('title') }} - {% endif %}Modern CSS Demos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="manifest" href="{{ asset('assets/site.webmanifest') }}">
     {{ encore_entry_link_tags('app') }}
     {% block stylesheets %}{% endblock %}
 </head>
