@@ -57,7 +57,12 @@ class DemoService
 
         foreach ($directories as $directory) {
             $identifier = $directory->getFilename();
-            $config = Yaml::parseFile($directory->getPathname() . '/config.yaml');
+            $configPath = $directory->getPathname() . '/config.yaml';
+            if (!file_exists($configPath)) {
+                continue;
+            }
+
+            $config = Yaml::parseFile($configPath);
 
             $data = [];
             $data['identifier'] = $identifier;
