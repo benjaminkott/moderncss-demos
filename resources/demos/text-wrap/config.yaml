@@ -1,4 +1,6 @@
 name: Text Wrap
 sorting: 90
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap
+features:
+    - text-wrap-balance
+    - text-wrap-pretty
 data:

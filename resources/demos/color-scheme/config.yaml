@@ -1,6 +1,6 @@
 name: Color Scheme
 sorting: 40
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme
+features: color-scheme
 data:
     vcards:
         -

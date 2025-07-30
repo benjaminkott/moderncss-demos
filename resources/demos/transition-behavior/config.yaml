@@ -1,5 +1,4 @@
 name: Transition Behavior
 sorting: 072
-new: true
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style
+features: transition-behavior
 data:

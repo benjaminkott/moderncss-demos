@@ -72,8 +72,16 @@ class DemoService
             $demo->setIdentifier($identifier);
             $demo->setSorting((int) ($config['sorting'] ?? 0));
             $demo->setName($config['name'] ?? $identifier);
-            $demo->setMdn($config['mdn'] ?? '');
             $demo->setNew((bool) ($config['new'] ?? false));
+
+            if (isset($config['features'])) {
+                $features = is_array($config['features']) ? $config['features'] : [$config['features']];
+                $demo->setFeatures($features);
+            } elseif (isset($config['baseline'])) {
+                // Backward compatibility - convert baseline to features
+                $features = is_array($config['baseline']) ? $config['baseline'] : [$config['baseline']];
+                $demo->setFeatures($features);
+            }
             $demo->setContent($this->environment->render('demos/' . $identifier . '/index.html.twig', $data));
 
             if (file_exists($directory->getPathname() . '/styles.css')) {

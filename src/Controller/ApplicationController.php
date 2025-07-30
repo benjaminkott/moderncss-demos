@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Service\BaselineService;
 use App\Service\DemoService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,11 +20,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class ApplicationController extends AbstractController
 {
     private DemoService $demoService;
+    private BaselineService $baselineService;
 
     public function __construct(
-        DemoService $demoService
+        DemoService $demoService,
+        BaselineService $baselineService
     ) {
         $this->demoService = $demoService;
+        $this->baselineService = $baselineService;
     }
 
     #[Route('', name: 'index')]
@@ -31,6 +35,7 @@ class ApplicationController extends AbstractController
     {
         return $this->render('application/index.html.twig', [
             'demos' => $this->demoService->getAll(),
+            'baselineService' => $this->baselineService,
         ]);
     }
 }

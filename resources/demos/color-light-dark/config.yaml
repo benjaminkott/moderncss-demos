@@ -1,7 +1,6 @@
 name: Color Light-Dark
 sorting: 41
-new: true
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+features: light-dark
 data:
     colorSchemes:
         -

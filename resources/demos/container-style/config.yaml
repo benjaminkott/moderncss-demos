@@ -1,7 +1,7 @@
 name: Container Style Queries
 sorting: 21
 source: https://developer.chrome.com/blog/style-queries/
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries
+features: container-style-queries
 data:
     products:
         -

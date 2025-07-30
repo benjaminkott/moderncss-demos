@@ -1,7 +1,6 @@
 name: Nested Rules
 sorting: 004
-new: true
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting
+features: nesting
 data:
     articles:
         -

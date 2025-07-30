@@ -1,7 +1,6 @@
 name: Relative Color Palette
 sorting: 46
-new: 1
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors/Relative_colors
+features: relative-color
 data:
     colors:
         - '#0055cc'

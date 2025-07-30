@@ -1,7 +1,6 @@
 name: scroll-driven animations
 sorting: 110
-new: true
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations
+features: scroll-driven-animations
 data:
     vcards:
         -

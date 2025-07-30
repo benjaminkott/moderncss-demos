@@ -1,6 +1,6 @@
 name: Color Mix Palette
 sorting: 44
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix
+features: color-mix
 data:
     colors:
         - '#0055cc'

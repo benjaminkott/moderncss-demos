@@ -1,7 +1,6 @@
 name: Relative Color
 sorting: 45
-new: true
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors/Relative_colors
+features: relative-color
 data:
     percentages:
         - '100%'

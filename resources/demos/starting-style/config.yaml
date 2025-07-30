@@ -1,5 +1,4 @@
 name: Starting Style
 sorting: 071
-new: true
-mdn: https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style
+features: starting-style
 data:

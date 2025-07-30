@@ -1,0 +1,128 @@
+features:
+  css-grid:
+    name: "CSS Grid Layout"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/grid"
+    year: 2017
+    month: 10
+
+  css-variables:
+    name: "CSS Custom Properties (Variables)"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/--*"
+    year: 2017
+    month: 4
+
+  cascade-layers:
+    name: "Cascade Layers"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/@layer"
+    year: 2022
+    month: 3
+
+  color-mix:
+    name: "color-mix() Function"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix"
+    year: 2023
+    month: 5
+
+  light-dark:
+    name: "light-dark() Function"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark"
+    year: 2024
+    month: 5
+
+  color-scheme:
+    name: "color-scheme Property"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme"
+    year: 2022
+    month: 1
+
+  relative-color:
+    name: "Relative Color Syntax"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors/Relative_colors"
+    year: 2024
+    month: 9
+
+  container-queries:
+    name: "Container Queries"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries"
+    year: 2023
+    month: 2
+
+  container-style-queries:
+    name: "Container Style Queries"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries"
+
+  focus-visible:
+    name: ":focus-visible Pseudo-class"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible"
+    year: 2022
+    month: 3
+
+  focus-within:
+    name: ":focus-within Pseudo-class"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within"
+    year: 2020
+    month: 1
+
+  has:
+    name: ":has() Pseudo-class"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/:has"
+    year: 2023
+    month: 12
+
+  accent-color:
+    name: "accent-color Property"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/accent-color"
+
+  background-clip-text:
+    name: "background-clip: text"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip"
+    year: 2023
+    month: 12
+
+  mask-image:
+    name: "mask-image Property"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image"
+    year: 2023
+    month: 12
+
+  nesting:
+    name: "CSS Nesting"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting"
+    year: 2023
+    month: 12
+
+  popover-api:
+    name: "Popover API"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover"
+    year: 2025
+    month: 1
+
+  starting-style:
+    name: "@starting-style Rule"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style"
+    year: 2024
+    month: 8
+
+  scroll-driven-animations:
+    name: "Scroll-driven Animations"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
+
+  text-wrap-balance:
+    name: "text-wrap: balance"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#balance"
+    year: 2024
+    month: 5
+
+  text-wrap-pretty:
+    name: "text-wrap: pretty"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#pretty"
+
+  display-contents:
+    name: "display: contents"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/display-box"
+
+  transition-behavior:
+    name: "transition-behavior Property"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior"
+    year: 2024
+    month: 8
