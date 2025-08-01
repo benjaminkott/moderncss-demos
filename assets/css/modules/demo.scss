@@ -30,14 +30,25 @@
     padding: 1rem;
     display: grid;
     position: relative;
-    grid-template-columns: var(--columns-editor) var(--columns-preview);
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--columns-preview) var(--columns-editor) auto;
     grid-template-areas:
-        'editors preview'
-        'editors control';
+        'preview'
+        'editors'
+        'control';
     height: 100%;
     width: 100%;
     gap: 1rem;
+}
+
+@media (min-width: 900px) {
+    .demo-container {
+        grid-template-columns: var(--columns-editor) var(--columns-preview);
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+            'editors preview'
+            'editors control';
+    }
 }
 
 @container style(--columns-editor: 0fr) {
