@@ -1,6 +1,6 @@
 name: Grid Complex
 sorting: 11
-features: css-grid
+features: grid
 data:
     vcards:
         -

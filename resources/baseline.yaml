@@ -1,5 +1,5 @@
 features:
-  css-grid:
+  grid:
     name: "CSS Grid Layout"
     mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/grid"
     year: 2017

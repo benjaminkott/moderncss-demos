@@ -84,6 +84,12 @@ class DemoService
             }
             $demo->setContent($this->environment->render('demos/' . $identifier . '/index.html.twig', $data));
 
+            if (file_exists($directory->getPathname() . '/styles-basic.css')) {
+                $demo->setStylesBasic(file_get_contents($directory->getPathname() . '/styles-basic.css'));
+            }
+            if (file_exists($directory->getPathname() . '/styles-basic.css.twig')) {
+                $demo->setStylesBasic($this->environment->render('demos/' . $identifier . '/styles-basic.css.twig', $data));
+            }
             if (file_exists($directory->getPathname() . '/styles.css')) {
                 $demo->setStyles(file_get_contents($directory->getPathname() . '/styles.css'));
             }

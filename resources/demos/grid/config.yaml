@@ -1,6 +1,6 @@
 name: Grid
 sorting: 10
-features: css-grid
+features: grid
 data:
     vcards:
         -

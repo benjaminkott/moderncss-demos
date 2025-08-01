@@ -18,6 +18,7 @@ class DemoDto
     protected bool $new = false;
     protected array $features = [];
     protected string $content = '';
+    protected string $stylesBasic = '';
     protected string $styles = '';
     protected string $scripts = '';
 
@@ -93,6 +94,18 @@ class DemoDto
     public function getContent(): string
     {
         return $this->content;
+    }
+
+    public function setStylesBasic(string $stylesBasic): self
+    {
+        $this->stylesBasic = $stylesBasic;
+
+        return $this;
+    }
+
+    public function getStylesBasic(): string
+    {
+        return $this->stylesBasic;
     }
 
     public function setStyles(string $styles): self

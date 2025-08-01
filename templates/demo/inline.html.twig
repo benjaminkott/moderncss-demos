@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>{{ demo.name }}</title>
     {{ encore_entry_link_tags('inline') }}
+    <style id="demo-styles-basic">
+        {{ demo.stylesBasic|raw }}
+    </style>
     <style id="demo-styles">
         {{ demo.styles|raw }}
     </style>
