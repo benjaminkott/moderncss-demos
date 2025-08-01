@@ -1,5 +1,6 @@
 import '../css/app.scss';
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
+import { html as beautifyHtml, css as beautifyCSS } from 'js-beautify';
 
 window.addEventListener('DOMContentLoaded', function () {
 
@@ -87,7 +88,30 @@ window.addEventListener('DOMContentLoaded', function () {
         // Editor
         const language = element.dataset.language;
         const target = element.dataset.target;
-        const initialValue = element.querySelector('textarea').value;
+        let initialValue = element.querySelector('textarea').value;
+        
+        // Format content before setting it
+        if (language === 'html') {
+            initialValue = beautifyHtml(initialValue, {
+                indent_size: 2,
+                indent_char: ' ',
+                max_preserve_newlines: 1,
+                preserve_newlines: true,
+                wrap_line_length: 120,
+                end_with_newline: false
+            });
+        } else if (language === 'css') {
+            initialValue = beautifyCSS(initialValue, {
+                indent_size: 2,
+                indent_char: ' ',
+                max_preserve_newlines: 1,
+                preserve_newlines: true,
+                end_with_newline: false,
+                selector_separator_newline: true,
+                newline_between_rules: true
+            });
+        }
+        
         element.querySelector('textarea').remove();
         const editor = monaco.editor.create(element, {
             value: initialValue,
@@ -99,6 +123,8 @@ window.addEventListener('DOMContentLoaded', function () {
             lineNumbers: false,
             minimap: { enabled: false },
             scrollBeyondLastLine: false,
+            formatOnPaste: true,
+            formatOnType: true,
         })
         editor.onDidChangeModelContent((event) => {
             const iframe = document.getElementById('demo-iframe');

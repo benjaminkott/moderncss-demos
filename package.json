@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "@typo3/icons": "^4.3.3",
+        "js-beautify": "^1.15.4",
         "monaco-editor": "^0.50.0",
         "monaco-editor-webpack-plugin": "^7.1"
     }
