@@ -1,4 +1,6 @@
 name: Focus Within
 sorting: 31
-features: focus-within
+features:
+  - focus-within
+  - registered-custom-properties
 data:

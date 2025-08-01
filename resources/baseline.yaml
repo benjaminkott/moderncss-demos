@@ -134,3 +134,9 @@ features:
   anchor-positioning:
     name: "Anchor positioning"
     mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning"
+
+  registered-custom-properties:
+    name: "Registered custom properties"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/@property"
+    year: 2024
+    month: 7
