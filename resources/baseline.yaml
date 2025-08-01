@@ -126,3 +126,11 @@ features:
     mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior"
     year: 2024
     month: 8
+
+  customizable-select:
+    name: "Customizable <select>"
+    mdn: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select"
+
+  anchor-positioning:
+    name: "Anchor positioning"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning"

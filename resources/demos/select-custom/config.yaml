@@ -1,0 +1,36 @@
+name: customizable select
+sorting: 120
+new: true
+features:
+  - customizable-select
+  - anchor-positioning
+data:
+  select:
+    groups:
+      - label: Page
+        items:
+          - label: Standard
+            value: 1
+            icon: /assets/apps.svg#apps-pagetree-page-default
+          - label: Backend User Section
+            value: 6
+            icon: /assets/apps.svg#apps-pagetree-page-backend-users
+      - label: Link
+        items:
+          - label: Shortcut
+            value: 4
+            icon: /assets/apps.svg#apps-pagetree-page-shortcut
+          - label: Mount Point
+            value: 7
+            icon: /assets/apps.svg#apps-pagetree-page-mountpoint
+          - label: Link to External Url
+            value: 3
+            icon: /assets/apps.svg#apps-pagetree-page-shortcut-external
+      - label: Special
+        items:
+          - label: Folder
+            value: 254
+            icon: /assets/apps.svg#apps-pagetree-folder-default
+          - label: Menu Separator
+            value: 199
+            icon: /assets/apps.svg#apps-pagetree-spacer
