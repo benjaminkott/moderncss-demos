@@ -133,13 +133,30 @@
     }
 }
 
-.demo-editor-section-label {
+.demo-editor-section-header {
+    display: flex;
+    background-color: #313131;
     flex-grow: 0;
     flex-shrink: 0;
-    background-color: #313131;
+}
+
+.demo-editor-section-label,
+.demo-editor-section-control {
+    flex-shrink: 0;
+    background-color: transparent;
     border: 0;
     color: #fff;
-    padding: .25rem .5rem;
+    padding: .35rem .75rem;
+
+    &:hover,
+    &:focus {
+        background: color-mix(in srgb, transparent, currentColor 5%);
+        outline: 0;
+    }
+}
+
+.demo-editor-section-label {
+    flex-grow: 1;
     text-align: left;
 }
 

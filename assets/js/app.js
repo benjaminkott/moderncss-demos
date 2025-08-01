@@ -78,26 +78,11 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     // Editors
-    document.querySelectorAll('button[data-editor-modify-fontsize]').forEach((button) => {
-        button.addEventListener('click', (event) => {
-            window.previeweditors.forEach(editor => {
-                let options = {
-                    fontSize: editor.getRawOptions().fontSize + parseInt(event.target.dataset.editorModifyFontsize)
-                }
-                editor.updateOptions(options);
-            });
-        });
-    });
-
     window.previeweditors = [];
     document.querySelectorAll('[data-editor="true"]').forEach((element) => {
-        // Tabs
-        element.parentElement.querySelector('button[data-section]').addEventListener('click', (event) => {
-            event.target.parentElement.parentElement.querySelectorAll('.demo-editor-section').forEach((section) => {
-                section.classList.remove('active');
-            });
-            event.target.parentElement.classList.add('active');
-        });
+
+        const editorContainer = element.closest('.demo-editors-inner');
+        const editorSection = element.closest('.demo-editor-section');
 
         // Editor
         const language = element.dataset.language;
@@ -119,6 +104,25 @@ window.addEventListener('DOMContentLoaded', function () {
             const iframe = document.getElementById('demo-iframe');
             iframe.contentDocument.querySelector(target).innerHTML = editor.getValue();
         });
+
+        // Tabs
+        editorSection.querySelector('button[data-section]').addEventListener('click', (event) => {
+            editorContainer.querySelectorAll('.demo-editor-section').forEach((section) => {
+                section.classList.remove('active');
+            });
+            editorSection.classList.add('active');
+        });
+
+        // Font Size
+        editorSection.querySelectorAll('button[data-editor-modify-fontsize]').forEach((button) => {
+            button.addEventListener('click', (event) => {
+                let options = {
+                    fontSize: editor.getRawOptions().fontSize + parseInt(event.target.dataset.editorModifyFontsize)
+                }
+                editor.updateOptions(options);
+            });
+        });
+
         window.previeweditors.push(editor);
     });
 
