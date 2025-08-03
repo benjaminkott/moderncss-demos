@@ -94,8 +94,8 @@ features:
   popover-api:
     name: "Popover API"
     mdn: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover"
-    year: 2025
-    month: 1
+    year: 2024
+    month: 4
 
   starting-style:
     name: "@starting-style Rule"
