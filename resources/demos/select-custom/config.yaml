@@ -4,7 +4,9 @@ new: true
 features:
   - mask-image
   - customizable-select
+  - transition-behavior
   - anchor-positioning
+  - scrollbar-color
 data:
   select:
     groups:

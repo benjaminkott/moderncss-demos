@@ -19,8 +19,12 @@ select {
     --select-padding-y: .5rem;
     --select-option-gap: .5rem;
     --select-option-checked-background-color: light-dark(#cddebe, #596050);
-    --select-picker-padding: .125rem;
     --select-icon-size: 1em;
+    --select-animation: cubic-bezier(0.19, 1, 0.22, 1);
+    --select-picker-padding: .125rem;
+    --select-picker-shadow:
+        0 1px 2px light-dark(rgba(0, 0, 0, .04), rgba(0, 0, 0, .25)),
+        0 1px 2px light-dark(rgba(0, 0, 0, .08), rgba(0, 0, 0, .35));
 
     &:hover {
         border-color: var(--select-hover-border-color);
@@ -31,6 +35,17 @@ select {
         border-color: var(--select-focus-border-color);
         outline: 0;
     }
+}
+
+/* System */
+.select-system {
+    font-size: var(--select-fontsize);
+    color: var(--select-color);
+    background-color: var(--select-background-color);
+    border-radius: var(--select-border-radius);
+    border: var(--select-border-width) solid var(--select-border-color);
+    padding: var(--select-padding-y) var(--select-padding-x);
+    width: 100%;
 }
 
 /* Classic */
@@ -90,6 +105,8 @@ select {
         border: var(--select-border-width) solid var(--select-border-color);
         padding: var(--select-picker-padding);
         margin: .125rem 0;
+        scrollbar-color: color-mix(in srgb, var(--select-background-color), var(--select-color)) transparent;
+        box-shadow: var(--select-picker-shadow);
     }
 
     &::picker-icon {
@@ -113,6 +130,8 @@ select {
 
     selectedcontent {
         display: flex;
+        overflow: hidden;
+        white-space: nowrap;
         align-items: center;
         gap: var(--select-option-gap);
     }
@@ -124,7 +143,7 @@ select {
         align-items: center;
         gap: var(--select-option-gap);
         color: color-mix(in srgb, var(--select-background-color), var(--select-color));
-        padding: var(--select-padding-y) var(--select-padding-x);
+        padding: var(--select-padding-y) calc(var(--select-padding-x) - var(--select-picker-padding));
         margin: 0;
     }
 
@@ -175,6 +194,39 @@ select {
 
     .select-modern-option-label {
         flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
+/* Starting Style Animation */
+.select-modern {
+    &::picker(select) {
+        opacity: 0;
+        transition: opacity .35s allow-discrete;
+    }
+
+    &::picker(select):popover-open {
+        opacity: 1;
+    }
+}
+
+@starting-style {
+  .select-modern::picker(select):popover-open {
+    opacity: 0;
+  }
+}
+
+/* Transition when option is selected */
+.select-modern selectedcontent > * {
+    transition:
+        transform .7s var(--select-animation),
+        display .7s allow-discrete,
+        opacity .7s;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+}

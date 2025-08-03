@@ -1,3 +1,8 @@
+:root {
+    --demo-light-bg: #ffffff;
+    --demo-align-content: flex-start;
+}
+
 label {
     display: inline-block;
     margin-bottom: .25rem;
@@ -7,10 +12,12 @@ label {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    max-width: 900px;
+    margin: 4rem auto;
 }
 
 @media (min-width: 600px) {
     .grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

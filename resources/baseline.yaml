@@ -140,3 +140,7 @@ features:
     mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/@property"
     year: 2024
     month: 7
+
+  scrollbar-color:
+    name: "scrollbar-color"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color"

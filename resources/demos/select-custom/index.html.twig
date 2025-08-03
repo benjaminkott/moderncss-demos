@@ -1,11 +1,10 @@
 
 <div>
-    <h2>Left to Right</h2>
     <div class="grid">
         <div class="grid-item">
 
-            <label for="select-classic">Classic Select</label>
-            <select id="select-classic" name="select-classic" class="select-classic">
+            <label for="select-system">System Select</label>
+            <select id="select-system" name="select-system" class="select-system">
                 {% for group in data.select.groups %}
                 <optgroup label="{{ group.label }}">
                     {% for item in group.items %}
@@ -14,39 +13,8 @@
                 </optgroup>
                 {% endfor %}
             </select>
-        </div>
-        <div class="grid-item">
-            <label for="select-modern">Modern Select</label>
-            <select id="select-modern" name="select-modern" class="select-modern">
-                <button class="select-modern-button">
-                    <selectedcontent></selectedcontent>
-                    <svg class="select-modern-button-chevron" role="img" aria-hidden="true">
-                        <use href="{{ asset('/assets/actions.svg#actions-chevron-expand') }}" />
-                    </svg>
-                </button>
-                {% for group in data.select.groups %}
-                <div role="group">
-                    <label>{{ group.label }}</label>
-                    {% for item in group.items %}
-                    <option value="{{ item.value }}">
-                        {% if item.icon is defined and item.icon %}
-                        <svg class="select-modern-option-icon" role="img" aria-hidden="true">
-                            <use href="{{ asset(item.icon) }}" />
-                        </svg>
-                        {% endif %}
-                        <span class="select-modern-option-label">{{ item.label }}</span>
-                    </option>
-                    {% endfor %}
-                </div>
-                {% endfor %}
-            </select>
-        </div>
-    </div>
-</div>
 
-<div dir="rtl">
-    <h2>Right to Left</h2>
-    <div class="grid">
+        </div>
         <div class="grid-item">
 
             <label for="select-classic">Classic Select</label>
