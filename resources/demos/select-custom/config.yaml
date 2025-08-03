@@ -2,6 +2,7 @@ name: customizable select
 sorting: 120
 new: true
 features:
+  - mask-image
   - customizable-select
   - anchor-positioning
 data:

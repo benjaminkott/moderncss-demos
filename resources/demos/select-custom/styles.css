@@ -136,6 +136,14 @@ select {
         border-radius: calc(var(--select-border-radius) - var(--select-picker-padding));
         margin: 0;
 
+        &:focus,
+        &:focus-visible {
+            outline-offset: calc(var(--select-border-width) * -1);
+            outline-width: var(--select-border-width);
+            outline-style: solid;
+            outline-color: color-mix(in srgb, var(--select-option-checked-background-color), var(--select-color));
+        }
+
         &:checked {
             background-color: var(--select-option-checked-background-color);
         }
