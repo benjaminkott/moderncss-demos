@@ -1,6 +1,5 @@
-name: customizable select
+name: Customizable Select
 sorting: 120
-new: true
 features:
   - mask-image
   - customizable-select
