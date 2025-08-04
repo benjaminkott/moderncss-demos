@@ -1,14 +1,4 @@
 :root {
-    --btn-color: #ffffff;
-    --btn-bg: #9c27b0;
-    --btn-border-color: hsl(from var(--btn-bg) h s calc(l * 1.2));
-    --btn-hover-color: var(--btn-color);
-    --btn-hover-bg: hsl(from var(--btn-bg) h s calc(l * 1.1));
-    --btn-hover-border-color: hsl(from var(--btn-bg) h s calc(l * 1.3));
-    --btn-focus-color: var(--btn-color);
-    --btn-focus-bg: hsl(from var(--btn-bg) h s calc(l * 1.2));
-    --btn-focus-border-color: hsl(from var(--btn-bg) h s calc(l * 1.4));
-
     --popover-color: #313131;
     --popover-bg: #fafafa;
     --popover-border-color: #cacaca;
@@ -16,33 +6,6 @@
     --popover-padding-y: 1.5rem;
     --popover-padding-x: 1.5rem;
     --popover-shadow: 0 0 5px 5px rgba(0, 0, 0, .25);
-}
-
-.container {
-    text-align: center;
-}
-
-.btn {
-    border: 2px solid transparent;
-    border-radius: .25rem;
-    padding: .5rem 1rem;
-    font-size: 1.2rem;
-    color: var(--btn-color);
-    background: var(--btn-bg);
-    border-color: var(--btn-border-color);
-    cursor: pointer;
-
-    &:hover {
-        color: var(--btn-hover-color);
-        background: var(--btn-hover-bg);
-        border-color: var(--btn-hover-border-color);
-    }
-
-    &:focus {
-        color: var(--btn-focus-color);
-        background: var(--btn-focus-bg);
-        border-color: var(--btn-focus-border-color);
-    }
 }
 
 .popover {
@@ -54,6 +17,13 @@
     border: 1px solid var(--popover-border-color);
     padding-inline-end: calc(var(--popover-padding-x) * 3);
     width: clamp(150px, 80vw, 600px);
+
+    &::backdrop {
+        background: linear-gradient(
+            color-mix(in srgb, #e66465, transparent 50%),
+            color-mix(in srgb, #9198e5, transparent 50%)
+        );
+    }
 }
 
 .popover-close {
@@ -83,14 +53,4 @@
     *:last-child {
         margin-bottom: 0;
     }
-}
-
-.sr-only {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
 }
