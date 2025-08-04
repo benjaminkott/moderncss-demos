@@ -1,4 +1,6 @@
 name: Transition Behavior
 sorting: 072
-features: transition-behavior
+features:
+  - clamp
+  - transition-behavior
 data:

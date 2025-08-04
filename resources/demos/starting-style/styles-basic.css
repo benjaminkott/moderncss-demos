@@ -1,0 +1,38 @@
+:root {
+    --btn-color: #ffffff;
+    --btn-bg: #9c27b0;
+    --btn-border-color: hsl(from var(--btn-bg) h s calc(l * 1.2));
+    --btn-hover-color: var(--btn-color);
+    --btn-hover-bg: hsl(from var(--btn-bg) h s calc(l * 1.1));
+    --btn-hover-border-color: hsl(from var(--btn-bg) h s calc(l * 1.3));
+    --btn-focus-color: var(--btn-color);
+    --btn-focus-bg: hsl(from var(--btn-bg) h s calc(l * 1.2));
+    --btn-focus-border-color: hsl(from var(--btn-bg) h s calc(l * 1.4));
+}
+
+.container {
+    text-align: center;
+}
+
+.btn {
+    border: 2px solid transparent;
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    color: var(--btn-color);
+    background: var(--btn-bg);
+    border-color: var(--btn-border-color);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--btn-hover-color);
+        background: var(--btn-hover-bg);
+        border-color: var(--btn-hover-border-color);
+    }
+
+    &:focus {
+        color: var(--btn-focus-color);
+        background: var(--btn-focus-bg);
+        border-color: var(--btn-focus-border-color);
+    }
+}

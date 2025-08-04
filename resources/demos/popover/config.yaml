@@ -1,4 +1,6 @@
 name: Popover
 sorting: 100
-features: popover-api
+features:
+  - clamp
+  - popover-api
 data:

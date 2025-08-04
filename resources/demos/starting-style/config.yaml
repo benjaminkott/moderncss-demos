@@ -1,4 +1,6 @@
 name: Starting Style
 sorting: 071
-features: starting-style
+features:
+  - clamp
+  - starting-style
 data:

@@ -144,3 +144,9 @@ features:
   scrollbar-color:
     name: "scrollbar-color"
     mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color"
+
+  clamp:
+    name: "clamp()"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/clamp"
+    year: 2020
+    month: 7
