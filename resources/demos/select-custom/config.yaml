@@ -2,8 +2,9 @@ name: Customizable Select
 sorting: 120
 features:
   - mask-image
-  - customizable-select
   - transition-behavior
+  - starting-style
+  - customizable-select
   - anchor-positioning
   - scrollbar-color
 data:
