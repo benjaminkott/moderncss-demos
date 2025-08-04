@@ -193,6 +193,14 @@ select {
     }
 }
 
+/* Style Backdrop */
+.select-modern {
+    &::picker(select)::backdrop {
+        background-color: var(--demo-bg);
+        opacity: .75;
+    }
+}
+
 /* Starting Style Animation */
 .select-modern {
     &::picker(select) {
