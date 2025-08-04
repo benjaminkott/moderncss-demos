@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    if (!CSS.supports('anchor-name', '--anchor-element')) {
+        window.demotools.notsupported('This browser does not support <strong>position-anchor</strong>.');
+    }
+    if (!CSS.supports('position-anchor', '--anchor-element')) {
+        window.demotools.notsupported('This browser does not support <strong>position-anchor</strong>.');
+    }
+    if (!CSS.supports('position-area', 'top')) {
+        window.demotools.notsupported('This browser does not support <strong>position-area</strong>.');
+    }
+
     const tooltip = document.getElementById('tooltip');
     const positionAreaValueContainer = document.getElementById('position-area-value');
     const positionAreaButtons = document.querySelectorAll('button[data-position-area]');

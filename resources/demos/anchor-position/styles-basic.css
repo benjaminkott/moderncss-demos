@@ -1,5 +1,6 @@
 .demo-contanier {
     display: flex;
+    flex-direction: column;
 }
 
 .page {
