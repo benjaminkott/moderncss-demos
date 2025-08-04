@@ -1,0 +1,105 @@
+:root {
+    --details-color: light-dark(#313131, #fafafa);
+    --details-background-color: light-dark(#fafafa, #313131);
+    --details-border-radius: .5rem;
+    --details-border-radius-start: var(--details-border-radius);
+    --details-border-radius-end: var(--details-border-radius);
+    --details-border-width: .0625rem;
+    --details-border-color: color-mix(in srgb, var(--details-background-color), var(--details-color) 20%);
+    --details-padding-y: 1rem;
+    --details-padding-x: 1rem;
+    --details-space: 1rem;
+    --details-marker-size: 1em;
+    --details-marker-angle: 0deg;
+}
+
+@property --details-marker-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: true;
+}
+
+details {
+    background-color: var(--details-background-color);
+    color: var(--details-color);
+    border: var(--details-border-width) solid var(--details-border-color);
+    border-radius: var(--details-border-radius-start) var(--details-border-radius-start) var(--details-border-radius-end) var(--details-border-radius-end);
+    margin: var(--details-space) 0;
+    transition: --details-marker-angle ease-in-out .5s;
+
+    summary {
+        --details-radius-inner-start: calc(var(--details-border-radius-start) - var(--details-border-width));
+        --details-radius-inner-end: calc(var(--details-border-radius-end) - var(--details-border-width));
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: var(--details-padding-y) var(--details-padding-x);
+        border-radius: var(--details-radius-inner-start) var(--details-radius-inner-start) var(--details-radius-inner-end) var(--details-radius-inner-end);
+
+        &:after {
+            content: '';
+            flex-grow: 0;
+            flex-shrink: 0;
+            height: var(--details-marker-size);
+            width: var(--details-marker-size);
+            rotate: var(--details-marker-angle);
+            background-color: currentColor;
+            mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cg fill='%23fff'%3e%3cpath d='M9.586 8 6.05 11.536l.707.707L11 8 6.757 3.757l-.707.707z'/%3e%3c/g%3e%3c/svg%3e");
+        }
+
+        &:hover {
+            background-color: color-mix(in srgb, var(--details-background-color), var(--details-color) 5%);
+        }
+    }
+
+    &[open] {
+        --details-marker-angle: 90deg;
+
+        summary {
+            border-start-end-radius: 0;
+            border-end-end-radius: 0;
+        }
+    }
+
+    .details-content {
+        border-top: var(--details-border-width) dashed var(--details-border-color);
+        padding: var(--details-padding-y) var(--details-padding-x);
+
+        >*:first-child {
+            margin-top: 0;
+        }
+
+        >*:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.details-group {
+    > details {
+        margin: 0;
+
+        --details-border-radius-start: 0;
+        --details-border-radius-end: 0;
+
+        &:first-child {
+            --details-border-radius-start: var(--details-border-radius);
+        }
+
+        &:last-child {
+            --details-border-radius-end: var(--details-border-radius);
+        }
+
+        & + details {
+            margin-top: calc(var(--details-border-width) * -1);
+        }
+
+        &:focus-within {
+            z-index: 1;
+        }
+    }
+
+    margin: var(--details-space) 0;
+}

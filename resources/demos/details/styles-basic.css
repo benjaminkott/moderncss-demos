@@ -1,0 +1,10 @@
+.demo-contanier {
+    align-content: flex-start;
+}
+
+hr {
+    border-style: solid;
+    border-color: color-mix(in srgb, transparent, currentColor 40%);
+    margin-block-start: 2.5rem;
+    margin-block-end: 2.5rem;
+}
