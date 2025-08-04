@@ -14,6 +14,7 @@
     --demo-bg: light-dark(var(--demo-light-bg), var(--demo-dark-bg));
     --demo-color: light-dark(var(--demo-light-color), var(--demo-dark-color));
     --demo-align-content: center;
+    --demo-highlight-color: light-dark(#0d6efd, #96c0ff);
 }
 
 html,
@@ -27,6 +28,11 @@ body {
     color: var(--demo-color);
     background: var(--demo-bg);
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+button.active {
+    border: 1px solid var(--demo-highlight-color);
+    background: color-mix(in srgb, var(--demo-highlight-color), var(--demo-bg));
 }
 
 .demo-contanier {

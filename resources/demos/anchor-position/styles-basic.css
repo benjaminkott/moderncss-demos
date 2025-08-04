@@ -1,0 +1,88 @@
+.demo-contanier {
+    display: flex;
+}
+
+.page {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    flex-grow: 1;
+}
+
+.page-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.controls {
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.controls-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.controls-current {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.control-label {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.control-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90px;
+    gap: 1px;
+
+    button {
+        aspect-ratio: 1/1;
+    }
+}
+
+.control-grid-item-pos-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+.control-grid-item-pos-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.control-grid-item-pos-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+.control-grid-item-pos-4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+.control-grid-item-pos-5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+.control-grid-item-pos-6 {
+    grid-column: 3;
+    grid-row: 2;
+}
+.control-grid-item-pos-7 {
+    grid-column: 1;
+    grid-row: 3;
+}
+.control-grid-item-pos-8 {
+    grid-column: 2;
+    grid-row: 3;
+}
+.control-grid-item-pos-9 {
+    grid-column: 3;
+    grid-row: 3;
+}

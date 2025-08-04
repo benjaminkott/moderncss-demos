@@ -1,0 +1,25 @@
+.anchor {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: .25rem;
+    background-color: color-mix(in srgb, currentColor, transparent 85%);
+    anchor-name: --anchor-element;
+}
+
+.tooltip {
+    position: absolute;
+    position-anchor: --anchor-element;
+    position-area: block-start;
+    border-radius: .25rem;
+    padding: 1rem;
+    margin: .5rem;
+    background-color: color-mix(in srgb, currentColor, transparent 85%);
+
+    > *:first-child {
+        margin-top: 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
