@@ -7,3 +7,4 @@ features:
   - marker
   - starting-style
   - registered-custom-properties
+  - interpolate-size

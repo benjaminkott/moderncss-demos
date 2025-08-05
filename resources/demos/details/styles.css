@@ -71,7 +71,8 @@ details {
     }
 
     &::details-content {
-        transition-property: opacity, translate;
+        transition-behavior: allow-discrete;
+        transition-property: opacity, translate, height, content-visibility;
         transition-duration: var(--details-animation-duration);
         transition-timing-function: ease-in-out;
         opacity: 0;
@@ -119,4 +120,18 @@ details {
     }
 
     margin: var(--details-space) 0;
+}
+
+/* interpolate-size */
+details {
+    interpolate-size: allow-keywords;
+
+    &::details-content {
+        height: 0;
+        overflow: clip;
+    }
+
+    &[open]::details-content {
+        height: auto;
+    }
 }

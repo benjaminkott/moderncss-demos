@@ -170,3 +170,7 @@ features:
   marker:
     name: "::marker"
     mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/::marker"
+
+  interpolate-size:
+    name: "interpolate-size"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size"
