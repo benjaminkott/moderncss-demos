@@ -3,5 +3,7 @@ sorting: 101
 features:
   - details
   - details-name
+  - details-content
+  - marker
   - starting-style
   - registered-custom-properties

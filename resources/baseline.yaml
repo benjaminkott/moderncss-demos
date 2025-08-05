@@ -162,3 +162,11 @@ features:
     mdn: "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
     year: 2024
     month: 9
+
+  details-content:
+    name: "::details-content"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/::details-content"
+
+  marker:
+    name: "::marker"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/::marker"
