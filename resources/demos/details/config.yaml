@@ -5,6 +5,5 @@ features:
   - details-name
   - details-content
   - marker
-  - starting-style
   - registered-custom-properties
   - interpolate-size
