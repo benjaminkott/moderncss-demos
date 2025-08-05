@@ -202,13 +202,13 @@ select {
 }
 
 /* Anchor Positioing */
-.select-modern {
+/* .select-modern {
     &::picker(select) {
         top: anchor(center);
         left: anchor(center);
         translate: -50% -50%;
     }
-}
+} */
 
 /* Starting Style Animation */
 .select-modern {
