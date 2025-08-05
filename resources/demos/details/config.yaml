@@ -1,2 +1,7 @@
 name: Details Element
-sorting: 130
+sorting: 101
+features:
+  - details
+  - details-name
+  - starting-style
+  - registered-custom-properties

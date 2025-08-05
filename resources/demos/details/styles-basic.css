@@ -1,5 +1,6 @@
 .demo-contanier {
     align-content: flex-start;
+    max-width: 500px;
 }
 
 hr {

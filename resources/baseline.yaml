@@ -150,3 +150,15 @@ features:
     mdn: "https://developer.mozilla.org/en-US/docs/Web/CSS/clamp"
     year: 2020
     month: 7
+
+  details:
+    name: "<details>"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
+    year: 2020
+    month: 1
+
+  details-name:
+    name: "Mutually exclusive <details> elements"
+    mdn: "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
+    year: 2024
+    month: 9
