@@ -1,0 +1,15 @@
+# Build context hygiene: the image installs its own vendor/ and node_modules/
+# and builds public/build itself.
+.git
+.ddev
+.github
+.idea
+.vscode
+.env.local
+.env.*.local
+node_modules
+vendor
+var
+public/build
+public/bundles
+.php-cs-fixer.cache

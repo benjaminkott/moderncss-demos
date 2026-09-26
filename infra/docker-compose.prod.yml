@@ -1,0 +1,20 @@
+# Production stack -- the deployment artefact. Komodo deploys exactly this file
+# (run directory infra/, env from infra/.env), and locally the same file runs
+# unchanged: `docker compose -f infra/docker-compose.prod.yml up -d --build`
+# from the repo root. See ../elitedesk-hosting/readme.md.
+
+name: moderncss-demos
+
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    image: moderncss-demos:latest
+    # Built, never pulled -- Komodo runs `docker compose pull` before a deploy.
+    pull_policy: build
+    restart: unless-stopped
+    environment:
+      APP_SECRET: ${APP_SECRET:?APP_SECRET setzen}
+    ports:
+      - '${BIND_ADDR:-127.0.0.1}:${MODERNCSS_PORT:-3800}:80'
